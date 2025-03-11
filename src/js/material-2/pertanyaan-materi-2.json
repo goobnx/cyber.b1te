@@ -1,0 +1,332 @@
+[
+    {
+        "nomor": 1,
+        "pertanyaan": "Apa yang dimaksud dengan data pribadi?",
+        "pilihan": [
+            "Informasi tentang komputer seseorang", 
+            "Informasi yang dapat mengidentifikasi seseorang", 
+            "Semua data yang ada di internet", 
+            "Data yang hanya bisa diakses oleh pemerintah"
+        ],
+        "jawaban": "Informasi yang dapat mengidentifikasi seseorang"
+    },
+    {
+        "nomor": 2,
+        "pertanyaan": "Mengapa data pribadi perlu dilindungi?",
+        "pilihan": [
+            "Agar bisa dibagikan dengan orang lain", 
+            "Karena data pribadi tidak terlalu penting", 
+            "Agar tidak disalahgunakan oleh pihak yang tidak bertanggung jawab", 
+            "Agar bisa diakses oleh semua orang"
+        ],
+        "jawaban": "Agar tidak disalahgunakan oleh pihak yang tidak bertanggung jawab"
+    },
+    {
+        "nomor": 3,
+        "pertanyaan": "Berikut ini adalah contoh data pribadi, kecuali:",
+        "pilihan": [
+            "Nama lengkap", 
+            "Nomor telepon", 
+            "Jumlah langkah harian di aplikasi kesehatan", 
+            "Nomor KTP"
+        ],
+        "jawaban": "Jumlah langkah harian di aplikasi kesehatan"
+    },
+    {
+        "nomor": 4,
+        "pertanyaan": "Apa yang bisa terjadi jika data pribadi bocor?",
+        "pilihan": [
+            "Tidak ada dampak sama sekali", 
+            "Bisa terjadi pencurian identitas dan penipuan", 
+            "Data akan otomatis terhapus dari internet", 
+            "Semua akun kita akan terkunci"
+        ],
+        "jawaban": "Bisa terjadi pencurian identitas dan penipuan"
+    },
+    {
+        "nomor": 5,
+        "pertanyaan": "Salah satu cara paling sederhana untuk melindungi data pribadi adalah?",
+        "pilihan": [
+            "Mengunggah data penting ke media sosial", 
+            "Menggunakan pengaturan privasi pada akun media sosial", 
+            "Menyebarkan informasi ke semua orang", 
+            "Tidak menggunakan internet sama sekali"
+        ],
+        "jawaban": "Menggunakan pengaturan privasi pada akun media sosial"
+    },
+    {
+        "nomor": 6,
+        "pertanyaan": "Mengapa kata sandi yang kuat itu penting?",
+        "pilihan": [
+            "Agar mudah diingat", 
+            "Untuk mencegah peretasan akun", 
+            "Agar bisa dibagikan ke teman", 
+            "Untuk membuat akun terlihat lebih keren"
+        ],
+        "jawaban": "Untuk mencegah peretasan akun"
+    },
+    {
+        "nomor": 7,
+        "pertanyaan": "Manakah contoh kata sandi yang kuat?",
+        "pilihan": [
+            "123456", 
+            "qwerty", 
+            "P@ssw0rd_!", 
+            "nama123"
+        ],
+        "jawaban": "P@ssw0rd_!"
+    },
+    {
+        "nomor": 8,
+        "pertanyaan": "Berapa minimal jumlah karakter yang disarankan untuk kata sandi yang kuat?",
+        "pilihan": [
+            "6", 
+            "8", 
+            "10", 
+            "12"
+        ],
+        "jawaban": "12"
+    },
+    {
+        "nomor": 9,
+        "pertanyaan": "Mengapa tidak boleh menggunakan kata sandi yang sama untuk semua akun?",
+        "pilihan": [
+            "Karena membingungkan", 
+            "Jika satu akun diretas, akun lain juga bisa dibobol", 
+            "Agar lebih mudah diingat", 
+            "Karena kata sandi harus selalu unik"
+        ],
+        "jawaban": "Jika satu akun diretas, akun lain juga bisa dibobol"
+    },
+    {
+        "nomor": 10,
+        "pertanyaan": "Bagaimana cara menyimpan kata sandi dengan aman?",
+        "pilihan": [
+            "Menuliskannya di buku catatan", 
+            "Menyimpannya di catatan HP", 
+            "Menggunakan password manager", 
+            "Menghafalkannya semua"
+        ],
+        "jawaban": "Menggunakan password manager"
+    },
+    {
+        "nomor": 11,
+        "pertanyaan": "Apa itu 2FA (Two-Factor Authentication)?",
+        "pilihan": [
+            "Fitur tambahan untuk mempercepat login", 
+            "Metode keamanan yang memerlukan dua langkah verifikasi", 
+            "Proses pembuatan akun baru", 
+            "Cara mengingat kata sandi lebih mudah"
+        ],
+        "jawaban": "Metode keamanan yang memerlukan dua langkah verifikasi"
+    },
+    {
+        "nomor": 12,
+        "pertanyaan": "Bagaimana cara kerja 2FA?",
+        "pilihan": [
+            "Memerlukan verifikasi tambahan setelah memasukkan kata sandi", 
+            "Otomatis mengingat kata sandi", 
+            "Membuat akun bisa diakses lebih cepat", 
+            "Menghapus akun yang dicurigai"
+        ],
+        "jawaban": "Memerlukan verifikasi tambahan setelah memasukkan kata sandi"
+    },
+    {
+        "nomor": 13,
+        "pertanyaan": "Apa manfaat utama dari 2FA?",
+        "pilihan": [
+            "Meningkatkan keamanan akun", 
+            "Memudahkan login tanpa kata sandi", 
+            "Menghapus kebutuhan untuk password", 
+            "Membuat akun lebih cepat dibuka"
+        ],
+        "jawaban": "Meningkatkan keamanan akun"
+    },
+    {
+        "nomor": 14,
+        "pertanyaan": "Contoh metode yang digunakan dalam 2FA adalah:",
+        "pilihan": [
+            "PIN atau kode OTP", 
+            "nama pengguna", 
+            "Foto profil", 
+            "Alamat email"
+        ],
+        "jawaban": "PIN atau kode OTP"
+    },
+    {
+        "nomor": 15,
+        "pertanyaan": "Akun apa saja yang sebaiknya menggunakan 2FA?",
+        "pilihan": [
+            "Akun media sosial", 
+            "Akun email", 
+            "Akun perbankan", 
+            "Semua jawaban benar"
+        ],
+        "jawaban": "Semua jawaban benar"
+    },
+    {
+        "nomor": 16,
+        "pertanyaan": "Apa itu enkripsi?",
+        "pilihan": [
+            "Proses mengubah data menjadi kode rahasia", 
+            "Cara mempercepat koneksi internet", 
+            "Teknik menyimpan data secara online", 
+            "Metode menghapus data lama"
+        ],
+        "jawaban": "Proses mengubah data menjadi kode rahasia"
+    },
+    {
+        "nomor": 17,
+        "pertanyaan": "Mengapa enkripsi penting dalam keamanan digital?",
+        "pilihan": [
+            "Untuk membuat data lebih mudah dibaca", 
+            "Untuk melindungi data dari pihak yang tidak berwenang", 
+            "Untuk menghapus file dengan lebih cepat", 
+            "Agar data bisa disalin lebih banyak"
+        ],
+        "jawaban": "Untuk melindungi data dari pihak yang tidak berwenang"
+    },
+    {
+        "nomor": 18,
+        "pertanyaan": "Bagaimana cara mengetahui bahwa suatu website menggunakan enkripsi?",
+        "pilihan": [
+            "Menggunakan HTTP di awal alamatnya", 
+            "Memiliki logo perusahaan besar", 
+            "Menggunakan HTTPS di awal alamatnya", 
+            "Ada banyak gambar di dalamnya"
+        ],
+        "jawaban": "Menggunakan HTTPS di awal alamatnya"
+    },
+    {
+        "nomor": 19,
+        "pertanyaan": "Aplikasi chatting mana yang menggunakan enkripsi end-to-end?",
+        "pilihan": [
+            "WhatsApp", 
+            "SMS biasa", 
+            "Email tanpa enkripsi", 
+            "Catatan di HP"
+        ],
+        "jawaban": "WhatsApp"
+    },
+    {
+        "nomor": 20,
+        "pertanyaan": "Apa itu keamanan jaringan?",
+        "pilihan": [
+            "Cara menghapus data pribadi", 
+            "Metode melindungi koneksi internet dari peretasan", 
+            "Sistem yang mempercepat internet", 
+            "Proses menyimpan data di cloud"
+        ],
+        "jawaban": "Metode melindungi koneksi internet dari peretasan"
+    },
+    {
+        "nomor": 21,
+        "pertanyaan": "Apa yang harus dilakukan saat menggunakan Wi-Fi publik?",
+        "pilihan": [
+            "Login ke akun penting tanpa perlindungan", 
+            "Menggunakan VPN untuk melindungi data", 
+            "Mengakses akun bank tanpa khawatir", 
+            "Mengirim informasi pribadi"
+        ],
+        "jawaban": "Menggunakan VPN untuk melindungi data"
+    },
+    {
+        "nomor": 22,
+        "pertanyaan": "Apa risiko utama menggunakan Wi-Fi gratis tanpa perlindungan?",
+        "pilihan": [
+            "Koneksi internet lambat", 
+            "Akun bisa diretas atau data dicuri", 
+            "Dapat menghemat kuota internet", 
+            "Bisa mengakses lebih banyak website"
+        ],
+        "jawaban": "Akun bisa diretas atau data dicuri"
+    },
+    {
+        "nomor": 23,
+        "pertanyaan": "Apa yang dilakukan VPN dalam keamanan jaringan?",
+        "pilihan": [
+            "Mengenkripsi data agar lebih aman", 
+            "Mempercepat koneksi internet", 
+            "Menghapus data yang tersimpan", 
+            "Membuat kata sandi otomatis"
+        ],
+        "jawaban": "Mengenkripsi data agar lebih aman"
+    },
+    {
+        "nomor": 24,
+        "pertanyaan": "Apa tanda Wi-Fi yang berpotensi tidak aman?",
+        "pilihan": [
+            "Tidak memiliki kata sandi", 
+            "Memerlukan login tambahan", 
+            "Terhubung dengan kecepatan tinggi", 
+            "Hanya bisa diakses di rumah"
+        ],
+        "jawaban": "Tidak memiliki kata sandi"
+    },
+    {
+        "nomor": 25,
+        "pertanyaan": "Apa yang sebaiknya dilakukan sebelum menjual perangkat elektronik?",
+        "pilihan": [
+            "Menghapus data pribadi", 
+            "Membiarkan semua file tetap ada", 
+            "Memberikan akun email bersamaan dengan perangkat", 
+            "Menonaktifkan fitur keamanan"
+        ],
+        "jawaban": "Menghapus data pribadi"
+    },
+    {
+        "nomor": 26,
+        "pertanyaan": "Bagaimana cara mengamankan jaringan Wi-Fi di rumah?",
+        "pilihan": [
+            "Tidak menggunakan kata sandi", 
+            "Menggunakan kata sandi yang kuat", 
+            "Membagikan kata sandi ke semua orang", 
+            "Tidak mengaktifkan enkripsi"
+        ],
+        "jawaban": "Menggunakan kata sandi yang kuat"
+    },
+    {
+        "nomor": 27,
+        "pertanyaan": "Mengapa penting untuk selalu update software?",
+        "pilihan": [
+            "Untuk menambahkan fitur baru", 
+            "Untuk menutup celah keamanan", 
+            "Agar perangkat berjalan lebih lambat", 
+            "Untuk menghapus file lama"
+        ],
+        "jawaban": "Untuk menutup celah keamanan"
+    },
+    {
+        "nomor": 28,
+        "pertanyaan": "Bagaimana cara mendeteksi website palsu?",
+        "pilihan": [
+            "Menggunakan HTTPS", 
+            "Memiliki banyak gambar", 
+            "Menawarkan hadiah yang mencurigakan", 
+            "Meminta data pribadi"
+        ],
+        "jawaban": "Menggunakan HTTPS"
+    },
+    {
+        "nomor": 29,
+        "pertanyaan": "Apa langkah pertama jika terjadi kebocoran data?",
+        "pilihan": [
+            "Segera ubah kata sandi", 
+            "Biarkan saja", 
+            "Hapus semua akun", 
+            "Menggunakan Wi-Fi publik"
+        ],
+        "jawaban": "Segera ubah kata sandi"
+    },
+    {
+        "nomor": 30,
+        "pertanyaan": "Mengapa tidak boleh mengirim data penting melalui email tanpa enkripsi?",
+        "pilihan": [
+            "Karena data bisa mudah dibaca oleh peretas", 
+            "Karena email selalu aman", 
+            "Karena tidak ada cara lain untuk berbagi data", 
+            "Karena semua email memiliki perlindungan otomatis"
+        ],
+        "jawaban": "Karena data bisa mudah dibaca oleh peretas"
+    }
+]

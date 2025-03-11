@@ -1,0 +1,332 @@
+[
+    {
+        "nomor": 1,
+        "pertanyaan": "Apa tujuan utama dari keamanan digital?",
+        "pilihan": [
+            "Membuat internet lebih cepat", 
+            "Melindungi data pribadi dari penyalahgunaan", 
+            "Menghilangkan virus komputer", 
+            "Mempercepat transaksi elektronik"
+        ],
+        "jawaban": "Melindungi data pribadi dari penyalahgunaan"
+    },
+    {
+        "nomor": 2,
+        "pertanyaan": "Mengapa etika dalam keamanan siber penting?",
+        "pilihan": [
+            "Untuk memastikan internet bebas digunakan tanpa aturan", 
+            "Agar pengguna internet dapat saling berbagi informasi tanpa batas", 
+            "Untuk menciptakan lingkungan digital yang aman dan bertanggung jawab", 
+            "Agar peretas dapat mengakses informasi lebih mudah"
+        ],
+        "jawaban": "Untuk menciptakan lingkungan digital yang aman dan bertanggung jawab"
+    },
+    {
+        "nomor": 3,
+        "pertanyaan": "Regulasi yang mengatur perlindungan data pribadi di Uni Eropa disebut?",
+        "pilihan": [
+            "UU ITE", 
+            "GDPR", 
+            "CCPA", 
+            "Cyber Law"
+        ],
+        "jawaban": "GDPR"
+    },
+    {
+        "nomor": 4,
+        "pertanyaan": "Apa dampak dari tidak mematuhi regulasi keamanan digital?",
+        "pilihan": [
+            "Pengguna bebas melakukan apa saja", 
+            "Tidak ada konsekuensi hukum", 
+            "Bisa dikenakan denda dan hukuman pidana", 
+            "Akses internet menjadi lebih lambat"
+        ],
+        "jawaban": "Bisa dikenakan denda dan hukuman pidana"
+    },
+    {
+        "nomor": 5,
+        "pertanyaan": "Apa yang terjadi jika seseorang melanggar UU ITE di Indonesia?",
+        "pilihan": [
+            "Tidak ada hukuman", 
+            "Bisa dikenakan denda hingga Rp10 miliar atau hukuman penjara", 
+            "Akun media sosialnya akan dihapus", 
+            "Mendapat peringatan dari pemerintah"
+        ],
+        "jawaban": "Bisa dikenakan denda hingga Rp10 miliar atau hukuman penjara"
+    },
+    {
+        "nomor": 6,
+        "pertanyaan": "Apa yang diatur dalam GDPR?",
+        "pilihan": [
+            "Cara meningkatkan kecepatan internet", 
+            "Perlindungan data pribadi pengguna", 
+            "Larangan menggunakan media sosial", 
+            "Pemblokiran situs yang tidak berizin"
+        ],
+        "jawaban": "Perlindungan data pribadi pengguna"
+    },
+    {
+        "nomor": 7,
+        "pertanyaan": "Apa yang membedakan CCPA dengan GDPR?",
+        "pilihan": [
+            "GDPR hanya berlaku di Amerika Serikat", 
+            "CCPA memberi hak pengguna untuk menolak penjualan data mereka", 
+            "GDPR hanya berlaku untuk situs media sosial", 
+            "CCPA mengatur perlindungan perangkat lunak"
+        ],
+        "jawaban": "CCPA memberi hak pengguna untuk menolak penjualan data mereka"
+    },
+    {
+        "nomor": 8,
+        "pertanyaan": "Apa tujuan utama UU ITE di Indonesia?",
+        "pilihan": [
+            "Membatasi penggunaan internet", 
+            "Melindungi transaksi elektronik dan data pengguna", 
+            "Mengizinkan akses bebas ke semua data", 
+            "Menghapus semua akun yang tidak terverifikasi"
+        ],
+        "jawaban": "Melindungi transaksi elektronik dan data pengguna"
+    },
+    {
+        "nomor": 9,
+        "pertanyaan": "Apa yang bisa terjadi jika perusahaan melanggar GDPR?",
+        "pilihan": [
+            "Tidak ada konsekuensi", 
+            "Mendapatkan peringatan dari pemerintah", 
+            "Didenda hingga €20 juta atau 4% dari pendapatan tahunan global", 
+            "Hanya kehilangan akses internet"
+        ],
+        "jawaban": "Didenda hingga €20 juta atau 4% dari pendapatan tahunan global"
+    },
+    {
+        "nomor": 10,
+        "pertanyaan": "Jika seseorang menyebarkan hoaks yang merugikan, apa sanksinya?",
+        "pilihan": [
+            "Tidak ada sanksi", 
+            "Bisa dikenakan denda besar atau pemblokiran akun", 
+            "Mendapat peringatan dari pengguna lain", 
+            "Harus membuat permintaan maaf di media sosial"
+        ],
+        "jawaban": "Bisa dikenakan denda besar atau pemblokiran akun"
+    },
+    {
+        "nomor": 11,
+        "pertanyaan": "Mengapa perusahaan perlu memiliki kebijakan keamanan digital?",
+        "pilihan": [
+            "Agar karyawan bisa menggunakan internet lebih bebas", 
+            "Untuk melindungi data penting dari ancaman siber", 
+            "Untuk meningkatkan popularitas perusahaan", 
+            "Agar karyawan dapat berbagi informasi dengan mudah"
+        ],
+        "jawaban": "Untuk melindungi data penting dari ancaman siber"
+    },
+    {
+        "nomor": 12,
+        "pertanyaan": "Apa yang dimaksud dengan prinsip 'least privilege'?",
+        "pilihan": [
+            "Setiap karyawan memiliki akses penuh ke semua data perusahaan", 
+            "Hanya orang yang berwenang yang bisa mengakses data tertentu", 
+            "Semua data perusahaan harus dibuka untuk publik", 
+            "Karyawan tidak perlu izin untuk mengakses data pelanggan"
+        ],
+        "jawaban": "Hanya orang yang berwenang yang bisa mengakses data tertentu"
+    },
+    {
+        "nomor": 13,
+        "pertanyaan": "Apa manfaat utama dari enkripsi data dalam perusahaan?",
+        "pilihan": [
+            "Mempercepat transfer file", 
+            "Melindungi data dari akses tidak sah", 
+            "Menghapus informasi sensitif", 
+            "Mengurangi kapasitas penyimpanan"
+        ],
+        "jawaban": "Melindungi data dari akses tidak sah"
+    },
+    {
+        "nomor": 14,
+        "pertanyaan": "Mengapa autentikasi dua faktor (2FA) wajib diterapkan dalam perusahaan?",
+        "pilihan": [
+            "Agar karyawan dapat masuk ke akun lebih cepat", 
+            "Untuk menambah lapisan keamanan dan mencegah peretasan", 
+            "Untuk menghapus data secara otomatis", 
+            "Agar karyawan tidak perlu menggunakan kata sandi"
+        ],
+        "jawaban": "Untuk menambah lapisan keamanan dan mencegah peretasan"
+    },
+    {
+        "nomor": 15,
+        "pertanyaan": "Bagaimana cara terbaik untuk melindungi data perusahaan?",
+        "pilihan": [
+            "Menerapkan enkripsi data dan sistem keamanan", 
+            "Menghapus semua informasi pelanggan", 
+            "Menggunakan kata sandi yang sama untuk semua akun", 
+            "Membagikan akses kepada seluruh karyawan"
+        ],
+        "jawaban": "Menerapkan enkripsi data dan sistem keamanan"
+    },
+    {
+        "nomor": 16,
+        "pertanyaan": "Apa peran utama individu dalam menjaga keamanan digital?",
+        "pilihan": [
+            "Mengabaikan ancaman siber", 
+            "Menggunakan media sosial dengan etis dan bertanggung jawab", 
+            "Menyebarkan informasi tanpa verifikasi", 
+            "Membagikan data pribadi dengan siapa saja"
+        ],
+        "jawaban": "Menggunakan media sosial dengan etis dan bertanggung jawab"
+    },
+    {
+        "nomor": 17,
+        "pertanyaan": "Mengapa tidak boleh membagikan informasi pribadi sembarangan?",
+        "pilihan": [
+            "Agar lebih banyak orang mengenal kita", 
+            "Bisa disalahgunakan oleh pihak yang tidak bertanggung jawab", 
+            "Memudahkan akses ke akun lain", 
+            "Tidak ada dampak negatifnya"
+        ],
+        "jawaban": "Bisa disalahgunakan oleh pihak yang tidak bertanggung jawab"
+    },
+    {
+        "nomor": 18,
+        "pertanyaan": "Apa langkah utama dalam mencegah penyebaran hoaks?",
+        "pilihan": [
+            "Memverifikasi sumber berita sebelum membagikan", 
+            "Membagikan informasi sebanyak mungkin", 
+            "Mengabaikan semua berita", 
+            "Menggunakan satu sumber berita saja"
+        ],
+        "jawaban": "Memverifikasi sumber berita sebelum membagikan"
+    },
+    {
+        "nomor": 19,
+        "pertanyaan": "Bagaimana cara terbaik untuk menggunakan media sosial secara aman?",
+        "pilihan": [
+            "Tidak menggunakan media sosial sama sekali", 
+            "Menggunakan fitur privasi dan tidak membagikan data sensitif", 
+            "Membuka semua informasi kepada publik", 
+            "Berdebat dengan pengguna lain di kolom komentar"
+        ],
+        "jawaban": "Menggunakan fitur privasi dan tidak membagikan data sensitif"
+    },
+    {
+        "nomor": 20,
+        "pertanyaan": "Mengapa hoaks berbahaya bagi masyarakat?",
+        "pilihan": [
+            "Bisa menyebabkan kepanikan dan merugikan orang lain", 
+            "Tidak memiliki dampak apa pun", 
+            "Mempercepat penyebaran informasi", 
+            "Membantu orang mendapatkan lebih banyak berita"
+        ],
+        "jawaban": "Bisa menyebabkan kepanikan dan merugikan orang lain"
+    },
+    {
+        "nomor": 21,
+        "pertanyaan": "Mengapa penting menggunakan kata sandi yang kuat dan unik?",
+        "pilihan": [
+            "Untuk mencegah peretasan akun", 
+            "Agar lebih mudah diingat", 
+            "Agar bisa dibagikan ke teman", 
+            "Untuk meningkatkan kecepatan akses"
+        ],
+        "jawaban": "Untuk mencegah peretasan akun"
+    },
+    {
+        "nomor": 22,
+        "pertanyaan": "Bagaimana cara terbaik untuk menyimpan kata sandi?",
+        "pilihan": [
+            "Menggunakan password manager", 
+            "Menuliskannya di buku catatan", 
+            "Menyimpan di aplikasi catatan HP", 
+            "Menggunakan kata sandi yang sama untuk semua akun"
+        ],
+        "jawaban": "Menggunakan password manager"
+    },
+    {
+        "nomor": 23,
+        "pertanyaan": "Apa yang harus dilakukan jika menemukan aktivitas mencurigakan di akun?",
+        "pilihan": [
+            "Mengubah kata sandi segera", 
+            "Mengabaikannya", 
+            "Membiarkan akun tetap login", 
+            "Menunggu sampai akun terkunci"
+        ],
+        "jawaban": "Mengubah kata sandi segera"
+    },
+    {
+        "nomor": 24,
+        "pertanyaan": "Bagaimana cara terbaik untuk menghindari serangan siber saat menggunakan Wi-Fi publik?",
+        "pilihan": [
+            "Tidak pernah menggunakan Wi-Fi", 
+            "Menggunakan VPN", 
+            "Selalu berbagi koneksi dengan orang lain", 
+            "Mengakses akun penting tanpa perlindungan"
+        ],
+        "jawaban": "Menggunakan VPN"
+    },
+    {
+        "nomor": 25,
+        "pertanyaan": "Mengapa penting untuk selalu memperbarui perangkat lunak?",
+        "pilihan": [
+            "Untuk menambah fitur baru", 
+            "Untuk menutup celah keamanan yang bisa dimanfaatkan peretas", 
+            "Agar perangkat berjalan lebih lambat", 
+            "Untuk menghapus file lama"
+        ],
+        "jawaban": "Untuk menutup celah keamanan yang bisa dimanfaatkan peretas"
+    },
+    {
+        "nomor": 26,
+        "pertanyaan": "Apa prinsip utama dalam keamanan digital?",
+        "pilihan": [
+            "Waspada, verifikasi, dan lindungi", 
+            "Percaya semua informasi yang didapat", 
+            "Klik semua tautan yang diterima", 
+            "Gunakan satu kata sandi untuk semua akun"
+        ],
+        "jawaban": "Waspada, verifikasi, dan lindungi"
+    },
+    {
+        "nomor": 27,
+        "pertanyaan": "Apa langkah terbaik untuk melindungi data pribadi saat bertransaksi online?",
+        "pilihan": [
+            "Menggunakan kartu kredit tanpa verifikasi", 
+            "Hanya berbelanja di situs yang menggunakan HTTPS", 
+            "Menggunakan Wi-Fi publik untuk transaksi", 
+            "Mengabaikan metode pembayaran yang aman"
+        ],
+        "jawaban": "Hanya berbelanja di situs yang menggunakan HTTPS"
+    },
+    {
+        "nomor": 28,
+        "pertanyaan": "Mengapa VPN penting dalam menjaga keamanan digital?",
+        "pilihan": [
+            "Mempercepat koneksi internet", 
+            "Mengenkripsi data agar lebih aman saat menggunakan jaringan publik", 
+            "Memblokir semua iklan di internet", 
+            "Menghapus jejak aktivitas online"
+        ],
+        "jawaban": "Mengenkripsi data agar lebih aman saat menggunakan jaringan publik"
+    },
+    {
+        "nomor": 29,
+        "pertanyaan": "Apa yang sebaiknya dilakukan jika menerima email dengan lampiran mencurigakan?",
+        "pilihan": [
+            "Segera membukanya untuk melihat isinya", 
+            "Mengunduh lampiran lalu memeriksanya", 
+            "Menghapus email tanpa membuka lampiran", 
+            "Membagikan lampiran ke teman untuk diperiksa"
+        ],
+        "jawaban": "Menghapus email tanpa membuka lampiran"
+    },
+    {
+        "nomor": 30,
+        "pertanyaan": "Bagaimana cara terbaik untuk menghindari social engineering?",
+        "pilihan": [
+            "Selalu memverifikasi identitas pengirim sebelum memberikan informasi", 
+            "Langsung mempercayai siapa saja yang meminta data pribadi", 
+            "Mengabaikan semua peringatan keamanan", 
+            "Membagikan informasi login jika diminta oleh pihak yang mengaku resmi"
+        ],
+        "jawaban": "Selalu memverifikasi identitas pengirim sebelum memberikan informasi"
+    }
+]

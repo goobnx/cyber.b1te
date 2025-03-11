@@ -1,0 +1,332 @@
+[
+    {
+        "nomor": 1,
+        "pertanyaan": "Apa yang dimaksud dengan ancaman siber?",
+        "pilihan": [
+            "Gangguan sinyal internet", 
+            "Serangan yang bertujuan mencuri atau merusak data digital", 
+            "Kesalahan sistem operasi", 
+            "Penggunaan internet yang lambat"
+        ],
+        "jawaban": "Serangan yang bertujuan mencuri atau merusak data digital"
+    },
+    {
+        "nomor": 2,
+        "pertanyaan": "Apa dampak utama dari serangan siber?",
+        "pilihan": [
+            "Kehilangan akses data", 
+            "Peningkatan kecepatan internet", 
+            "Mengurangi konsumsi daya baterai", 
+            "Mempercepat kinerja perangkat"
+        ],
+        "jawaban": "Kehilangan akses data"
+    },
+    {
+        "nomor": 3,
+        "pertanyaan": "Jenis ancaman siber yang melibatkan pencurian informasi melalui pesan atau email palsu disebut?",
+        "pilihan": [
+            "Malware", 
+            "Phishing", 
+            "DDoS", 
+            "Firewall"
+        ],
+        "jawaban": "Phishing"
+    },
+    {
+        "nomor": 4,
+        "pertanyaan": "Apa yang harus dilakukan jika menerima email yang mencurigakan?",
+        "pilihan": [
+            "Segera membalas dan memberikan informasi pribadi", 
+            "Mengklik tautan yang diberikan untuk mengecek keasliannya", 
+            "Mengabaikan dan melaporkan email tersebut", 
+            "Mengunduh lampiran yang tersedia"
+        ],
+        "jawaban": "Mengabaikan dan melaporkan email tersebut"
+    },
+    {
+        "nomor": 5,
+        "pertanyaan": "Mengapa ancaman siber semakin meningkat?",
+        "pilihan": [
+            "Karena semakin banyak orang yang menggunakan internet", 
+            "Karena perangkat semakin canggih", 
+            "Karena internet lebih murah", 
+            "Karena orang semakin pintar dalam teknologi"
+        ],
+        "jawaban": "Karena semakin banyak orang yang menggunakan internet"
+    },
+    {
+        "nomor": 6,
+        "pertanyaan": "Apa tujuan utama serangan phishing?",
+        "pilihan": [
+            "Mempercepat koneksi internet", 
+            "Mencuri informasi pribadi", 
+            "Menyebarkan iklan produk", 
+            "Mengurangi kapasitas penyimpanan perangkat"
+        ],
+        "jawaban": "Mencuri informasi pribadi"
+    },
+    {
+        "nomor": 7,
+        "pertanyaan": "Ciri-ciri email phishing adalah?",
+        "pilihan": [
+            "Datang dari sumber yang tidak dikenal", 
+            "Ditulis dengan tata bahasa yang sempurna", 
+            "Tidak meminta informasi sensitif", 
+            "Tidak mengandung tautan"
+        ],
+        "jawaban": "Datang dari sumber yang tidak dikenal"
+    },
+    {
+        "nomor": 8,
+        "pertanyaan": "Bagaimana cara melindungi diri dari phishing?",
+        "pilihan": [
+            "Tidak membuka email dari pengirim tak dikenal", 
+            "Selalu membagikan data login dengan rekan kerja", 
+            "Menggunakan jaringan Wi-Fi publik untuk transaksi", 
+            "Mengabaikan peringatan keamanan dari sistem"
+        ],
+        "jawaban": "Tidak membuka email dari pengirim tak dikenal"
+    },
+    {
+        "nomor": 9,
+        "pertanyaan": "Jika seseorang terkena serangan phishing, langkah pertama yang harus dilakukan adalah?",
+        "pilihan": [
+            "Mengabaikan pesan tersebut", 
+            "Menghubungi pengirim email untuk konfirmasi", 
+            "Mengubah kata sandi akun yang terkena dampak", 
+            "Membagikan email tersebut kepada orang lain"
+        ],
+        "jawaban": "Mengubah kata sandi akun yang terkena dampak"
+    },
+    {
+        "nomor": 10,
+        "pertanyaan": "Tautan phishing biasanya mengarah ke?",
+        "pilihan": [
+            "Situs web resmi", 
+            "Situs palsu yang meniru halaman asli", 
+            "Situs yang tidak memiliki keamanan tambahan", 
+            "Situs berita terpercaya"
+        ],
+        "jawaban": "Situs palsu yang meniru halaman asli"
+    },
+    {
+        "nomor": 11,
+        "pertanyaan": "Apa itu malware?",
+        "pilihan": [
+            "Perangkat lunak berbahaya yang dapat merusak sistem", 
+            "Aplikasi antivirus terbaru", 
+            "Fitur keamanan dalam komputer", 
+            "Alat untuk mempercepat kinerja perangkat"
+        ],
+        "jawaban": "Perangkat lunak berbahaya yang dapat merusak sistem"
+    },
+    {
+        "nomor": 12,
+        "pertanyaan": "Jenis malware yang mengenkripsi data dan meminta tebusan disebut?",
+        "pilihan": [
+            "Virus", 
+            "Spyware", 
+            "Ransomware", 
+            "Adware"
+        ],
+        "jawaban": "Ransomware"
+    },
+    {
+        "nomor": 13,
+        "pertanyaan": "Apa yang sebaiknya dilakukan untuk menghindari malware?",
+        "pilihan": [
+            "Mengunduh perangkat lunak hanya dari sumber terpercaya", 
+            "Membuka semua lampiran email yang masuk", 
+            "Tidak pernah memperbarui perangkat lunak", 
+            "Mengabaikan peringatan keamanan"
+        ],
+        "jawaban": "Mengunduh perangkat lunak hanya dari sumber terpercaya"
+    },
+    {
+        "nomor": 14,
+        "pertanyaan": "Bagaimana cara kerja virus komputer?",
+        "pilihan": [
+            "Meningkatkan kecepatan pemrosesan data", 
+            "Menyebar dan merusak file sistem", 
+            "Menghapus semua data dari perangkat", 
+            "Memperbaiki perangkat lunak yang bermasalah"
+        ],
+        "jawaban": "Menyebar dan merusak file sistem"
+    },
+    {
+        "nomor": 15,
+        "pertanyaan": "Manakah contoh yang bukan termasuk malware?",
+        "pilihan": [
+            "Worm", 
+            "Trojan", 
+            "Enkripsi", 
+            "Spyware"
+        ],
+        "jawaban": "Enkripsi"
+    },
+    {
+        "nomor": 16,
+        "pertanyaan": "Apa itu serangan Man-in-the-Middle (MitM)?",
+        "pilihan": [
+            "Peretas menyadap komunikasi antara dua pihak tanpa izin", 
+            "Serangan yang merusak perangkat secara langsung", 
+            "Teknik untuk mempercepat jaringan internet", 
+            "Penggunaan firewall untuk melindungi data"
+        ],
+        "jawaban": "Peretas menyadap komunikasi antara dua pihak tanpa izin"
+    },
+    {
+        "nomor": 17,
+        "pertanyaan": "Di mana serangan MitM sering terjadi?",
+        "pilihan": [
+            "Saat menggunakan Wi-Fi publik tanpa perlindungan", 
+            "Saat mengakses jaringan pribadi", 
+            "Saat mengunduh aplikasi dari App Store", 
+            "Saat melakukan panggilan telepon biasa"
+        ],
+        "jawaban": "Saat menggunakan Wi-Fi publik tanpa perlindungan"
+    },
+    {
+        "nomor": 18,
+        "pertanyaan": "Bagaimana cara mencegah serangan MitM?",
+        "pilihan": [
+            "Gunakan VPN saat mengakses Wi-Fi publik", 
+            "Selalu gunakan HTTP dalam browsing", 
+            "Hindari menggunakan enkripsi", 
+            "Berbagi data login dengan orang lain"
+        ],
+        "jawaban": "Gunakan VPN saat mengakses Wi-Fi publik"
+    },
+    {
+        "nomor": 19,
+        "pertanyaan": "Apa risiko utama dari serangan MitM?",
+        "pilihan": [
+            "Perangkat menjadi lebih lambat", 
+            "Informasi pribadi dapat dicuri", 
+            "Meningkatkan kecepatan akses internet", 
+            "Meningkatkan kapasitas penyimpanan perangkat"
+        ],
+        "jawaban": "Informasi pribadi dapat dicuri"
+    },
+    {
+        "nomor": 20,
+        "pertanyaan": "Situs web yang aman dari serangan MitM biasanya memiliki?",
+        "pilihan": [
+            "HTTPS dalam URL-nya", 
+            "Tampilan berwarna merah", 
+            "Banyak iklan yang muncul", 
+            "Teks yang sulit dibaca"
+        ],
+        "jawaban": "HTTPS dalam URL-nya "
+    },
+    {
+        "nomor": 21,
+        "pertanyaan": "Apa itu social engineering?",
+        "pilihan": [
+            "Teknik manipulasi psikologis untuk menipu korban", 
+            "Serangan dengan perangkat lunak", 
+            "Metode untuk mempercepat internet", 
+            "Sistem keamanan terbaru"
+        ],
+        "jawaban": "Teknik manipulasi psikologis untuk menipu korban"
+    },
+    {
+        "nomor": 22,
+        "pertanyaan": "Jenis social engineering yang melibatkan iming-iming hadiah disebut?",
+        "pilihan": [
+            "Pretexting", 
+            "Baiting", 
+            "Tailgating", 
+            "Spoofing"
+        ],
+        "jawaban": "Baiting"
+    },
+    {
+        "nomor": 23,
+        "pertanyaan": "Pretexting adalah teknik di mana peretas?",
+        "pilihan": [
+            "Berpura-pura menjadi pihak terpercaya untuk mendapatkan informasi", 
+            "Menggunakan virus untuk menginfeksi perangkat", 
+            "Menyebarkan malware melalui Wi-Fi", 
+            "Menggunakan VPN untuk menyamarkan identitas"
+        ],
+        "jawaban": "Berpura-pura menjadi pihak terpercaya untuk mendapatkan informasi"
+    },
+    {
+        "nomor": 24,
+        "pertanyaan": "Cara paling efektif untuk menghindari social engineering adalah?",
+        "pilihan": [
+            "Selalu memverifikasi identitas sebelum membagikan informasi", 
+            "Mengklik semua tautan yang diterima", 
+            "Mengabaikan peringatan keamanan", 
+            "Berbagi data dengan orang asing"
+        ],
+        "jawaban": "Selalu memverifikasi identitas sebelum membagikan informasi"
+    },
+    {
+        "nomor": 25,
+        "pertanyaan": "Contoh social engineering dalam kehidupan nyata adalah?",
+        "pilihan": [
+            "Memasang antivirus terbaru", 
+            "Seseorang menyamar sebagai petugas IT untuk meminta kata sandi", 
+            "Menggunakan koneksi internet yang lebih cepat", 
+            "Menghapus data yang tidak digunakan"
+        ],
+        "jawaban": "Seseorang menyamar sebagai petugas IT untuk meminta kata sandi "
+    },
+    {
+        "nomor": 26,
+        "pertanyaan": "Apa yang harus dilakukan jika akun diretas?",
+        "pilihan": [
+            "Segera mengubah kata sandi ", 
+            "Membiarkannya tanpa tindakan", 
+            "Memberikan informasi kepada siapa saja", 
+            "Menggunakan Wi-Fi publik untuk masuk kembali"
+        ],
+        "jawaban": "Segera mengubah kata sandi "
+    },
+    {
+        "nomor": 27,
+        "pertanyaan": "Mengapa 2FA penting?",
+        "pilihan": [
+            "Memberikan lapisan keamanan tambahan", 
+            "Mempermudah login tanpa kata sandi", 
+            "Mengurangi keamanan akun", 
+            "Membuat akun lebih lambat"
+        ],
+        "jawaban": "Memberikan lapisan keamanan tambahan"
+    },
+    {
+        "nomor": 28,
+        "pertanyaan": "Langkah pertama jika terkena malware adalah?",
+        "pilihan": [
+            "Putuskan koneksi internet", 
+            "Mengabaikannya", 
+            "Menjalankan banyak aplikasi", 
+            "Menunggu sistem memulihkan sendiri"
+        ],
+        "jawaban": "Putuskan koneksi internet"
+    },
+    {
+        "nomor": 29,
+        "pertanyaan": "Bagaimana cara memastikan perangkat aman?",
+        "pilihan": [
+            "Menggunakan antivirus yang selalu diperbarui", 
+            "Tidak pernah memperbarui perangkat", 
+            "Menyimpan semua data di perangkat tanpa backup", 
+            "Menggunakan jaringan Wi-Fi tanpa kata sandi"
+        ],
+        "jawaban": "Menggunakan antivirus yang selalu diperbarui"
+    },
+    {
+        "nomor": 30,
+        "pertanyaan": "Apa prinsip utama keamanan digital?",
+        "pilihan": [
+            "Waspada, verifikasi, dan lindungi", 
+            "Percaya, bagikan, dan klik semua tautan", 
+            "Abaikan peringatan keamanan", 
+            "Gunakan satu kata sandi untuk semua akun"
+        ],
+        "jawaban": "Waspada, verifikasi, dan lindungi"
+    }
+]

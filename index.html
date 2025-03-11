@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cyber.b1te - Beranda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+      .swiper-button-next-custom, 
+      .swiper-button-prev-custom {
+        color: black;
+        background: white;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .border-l-5 {
+        border-left-width: 5px;
+      } 
+
+      .border-r-5 {
+        border-right-width: 5px;
+      }
+
+      .inverted-radius {
+        --r: 20px;
+        --s: 30px;
+        --x: 20px;
+        --y: 10px;
+
+        border-radius: var(--r);
+        --_m:/calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%,#0000 72%);
+        --_g:conic-gradient(at calc(100% - var(--r)) var(--r),#0000 25%,#000 0);
+        --_d:(var(--s) + var(--r));
+        mask:
+          calc(100% - var(--_d) - var(--x)) 0 var(--_m),
+          100% calc(var(--_d) + var(--y)) var(--_m),
+          radial-gradient(var(--s) at 100% 0,#0000 99%,#000 calc(100% + 1px)) 
+          calc(-1*var(--r) - var(--x)) calc(var(--r) + var(--y)),
+          var(--_g) calc(-1*var(--_d) - var(--x)) 0,
+          var(--_g) 0 calc(var(--_d) + var(--y));
+        mask-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body
+    x-data="
+      {
+        scrolledFromTop: false
+      }
+    "
+    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false">
+    <header
+      x-data="
+        {
+          navbarOpen: false,
+        }
+      "
+      :class="scrolledFromTop ? 'fixed z-50 bg-navy-blue shadow-xl backdrop-blur-sm' : 'absolute' "
+      class="top-0 left-0 z-50 w-full fixed bg-navy-blue backdrop-blur-sm">
+      <div class="container mx-auto">
+        <div class="relative flex items-center justify-between mx-4">
+          <div class="max-w-full px-4 w-60">
+            <a href="javascript:void(0)" class="block w-full py-5">
+              <img src="asset/main_logo.png" alt="logo" class="w-full dark:hidden">
+              <img src="asset/main_logo.png" alt="logo" class="hidden w-full dark:block">
+            </a>
+          </div>
+          <div class="flex items-center justify-between w-full px-4">
+            <div>
+              <button
+                @click="navbarOpen = !navbarOpen"
+                :class="navbarOpen && 'navbarTogglerActive'"
+                id="navbarToggler"
+                class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden">
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
+              </button>
+              <nav
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-90"
+                x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-90"
+                :class="!navbarOpen && 'hidden'"
+                id="navbarCollapse"
+                class="absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-black bg-opacity-80 backdrop-blur-sm py-5 px-6 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:shadow-none">
+                <ul class="block lg:flex">
+                  <li>
+                    <a href="index.html"
+                      class="flex py-2 text-base font-medium text-white dark:text-white hover:text-green-neon lg:ml-12 lg:inline-flex">
+                       Beranda
+                    </a>
+                  </li>
+                  <li>
+                    <a href="training.html"
+                      class="flex py-2 text-base font-medium text-white dark:text-white hover:text-green-neon lg:ml-12 lg:inline-flex">
+                      Pelatihan
+                    </a>
+                  </li>
+                  <li>
+                    <a href="article.html"
+                      class="flex py-2 text-base font-medium text-white dark:text-white hover:text-green-neon lg:ml-12 lg:inline-flex">
+                      Artikel
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="justify-end hidden pr-16 sm:flex lg:pr-0">
+              <div class="relative"> 
+                  <input type="text" class="py-3 text-base font-medium text-black rounded-lg px-7 border-2 border-white"
+                  placeholder="Pencarian">                   
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="space-y-6 md:space-y-24 bg-navy-blue">
+
+      <!-- HERO -->
+      <div class="relative px-12 pt-24 border border-green-neon">
+        <div class="container mx-auto">
+          <div class="flex flex-col-reverse lg:flex-row items-center lg:items-center lg:gap-10 xl:gap-16">
+            
+            <div class="w-full lg:w-6/12 text-center lg:text-left">
+              <h1 class="mb-4 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-[50px] xl:text-[52px]">
+                Data Anda aman, <br>hidup nyaman
+              </h1>
+              <p class="mb-6 max-w-lg text-lg text-white mx-auto lg:mx-0">
+                Jangan biarkan ancaman siber mengintai Anda.<br>
+                Pelajari strategi terbaik untuk menjaga keamanan<br>
+                digital Anda bersama <span class="font-bold">{ Cyber.b1te }</span>.
+              </p>
+              <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                <a href="training.html" class="px-6 py-3 text-white bg-sea-blue rounded-full text-lg font-medium">
+                  Mulai Pelatihan
+                </a>
+                <button class="px-6 py-3 border border-sea-blue hover:border-green-neon bg-transparent hover:bg-green-neon text-white rounded-full text-lg font-medium flex items-center transition-colors duration-300">
+                  <i class="fa-solid fa-circle-play"></i>&nbsp;
+                  Tonton Video
+                </button>
+              </div>
+            </div>
+  
+            <div class="w-full lg:w-6/12 flex justify-center lg:justify-end">
+              <img src="asset/main-hero.png" alt="hero" class="max-w-[250px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[400px] xl:max-w-[450px] p-4">
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      <!-- VIDEO -->
+      <div class="relative antialiased border border-green-neon py-6 md:py-0">
+        <main class="relative flex flex-col justify-center overflow-hidden">
+            <div class="w-full max-w-6xl mx-auto px-4 md:px-6 ">
+                <div class="flex justify-center">
+                  <video class="h-full w-full rounded-lg" controls autoPlay>
+                    <iframe src="https://drive.google.com/file/d/1zBlp3W6QTFMJSMME-gELpL0zlBbXOK5C/preview" width="640" height="360" allow="autoplay"></iframe>
+                
+                </div>
+            </div>
+        </main>
+      </div>
+  
+      <!-- TENTANG KAMI -->
+      <section class="flex text-white px-6 border border-green-neon py-6 md:py-0">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-5 items-center lg:items-start">
+            
+            <div class="lg:w-7/12 space-y-3 text-center lg:text-left">
+                <h2 class="text-green-neon text-lg font-medium">TENTANG KAMI</h2>
+                <h1 class="text-3xl font-bold mb-6">Kesadaran Digital untuk Generasi Cerdas</h1>
+    
+                <div class="space-y-8">
+                    <div class="bg-white rounded-lg p-4 flex items-center shadow-sea-blue-opacity-3">
+                        <div class="w-12 h-12 flex items-center justify-center bg-sea-blue rounded-full mr-4">
+                          <i class="fa-brands fa-keycdn text-3xl"></i>
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-black font-bold text-base">Edukasi Berbasis Keamanan</h3>
+                            <p class="text-black text-sm">Panduan praktis untuk menjaga data pribadi Anda.</p>
+                        </div>
+                    </div>
+    
+                    <div class="bg-white rounded-lg p-4 flex items-center shadow-green-neon-opacity-3">
+                        <div class="w-12 h-12 flex items-center justify-center bg-green-neon rounded-full mr-4">
+                          <i class="fa-solid fa-swatchbook text-3xl"></i>
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-black font-bold text-base">Pelatihan Interaktif</h3>
+                            <p class="text-black text-sm">Pelatihan untuk meningkatkan kesadaran keamanan data.</p>
+                        </div>
+                    </div>
+    
+                    <div class="bg-white rounded-lg p-4 flex items-center shadow-sun-yellow-opacity-3">
+                        <div class="w-12 h-12 flex items-center justify-center bg-sun-yellow rounded-full mr-4">
+                          <i class="fa-solid fa-comments text-3xl"></i>
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-black font-bold text-base">Komunitas Peduli Digital</h3>
+                            <p class="text-black text-sm">Komunitas yang mendukung praktik digital yang aman.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="relative flex flex-col items-center w-full lg:w-5/12 h-full">
+                <div class="grid grid-cols-2 gap-4 w-full h-full">
+                    <img src="asset/hero-about-us-1.jpg" alt="Foto 1" class="rounded-lg object-cover w-full h-[200px] md:h-3/4">
+                    <img src="asset/hero-about-us-2.jpg" alt="Foto 2" class="rounded-lg object-cover w-full h-[250px] md:h-full">
+                </div>
+                <div class="absolute bottom-[10px] md:bottom-[20px] left-px flex items-center bg-white rounded-lg shadow-2xl px-4 py-2">
+                    <div class="flex -space-x-2">
+                        <img src="asset/user-1.jpg" class="w-10 md:w-10 h-10 md:h-10 rounded-full border border-navy-blue object-cover">
+                        <img src="asset/user-2.jpg" class="w-10 md:w-10 h-10 md:h-10 rounded-full border border-navy-blue object-cover">
+                        <img src="asset/user-3.jpg" class="w-10 md:w-10 h-10 md:h-10 rounded-full border border-navy-blue object-cover">
+                    </div>
+                    <div class="ml-2 md:ml-4">
+                        <p class="text-blue-500 font-bold text-sm md:text-base">25k</p>
+                        <p class="text-gray-600 text-xs md:text-sm">telah bergabung</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+  
+      <!-- PELATIHAN -->
+      <div class="px-4 border border-green-neon py-6 md:py-0">
+        <div class="text-center pb-5">
+          <h2 class="text-green-neon text-lg font-medium">PELATIHAN</h2>
+          <h1 class="text-3xl text-white font-bold mb-6">
+            Pelajari dasar keamanan siber dan lindungi data Anda
+          </h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
+          <div class="relative w-80 bg-gray-800 text-white rounded-2xl p-6 overflow-hidden inverted-radius">
+            <h2 class="text-xl font-bold leading-tight text-left">
+              Serangan Siber & <br>Cara Mengatasinya  
+            </h2>
+            <div class="flex items-center mt-4 space-x-4 text-white justify-center md:justify-start">
+              <div class="flex items-center space-x-2">
+                <span><i class="fa-regular fa-note-sticky text-green-neon"></i></span>
+                <span>17 Soal</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <span><i class="fa-solid fa-chart-simple text-green-neon"></i></span>
+                <span>Tingkat: Mudah</span>
+              </div>
+            </div>
+            <a href="training/material-1.html"
+              class="mt-6 w-full border border-green-neon text-green-neon py-2 rounded-lg hover:bg-green-400 hover:text-gray-900 transition inline-block text-center">
+              Mulai Pelatihan
+            </a>
+          </div>
+          <div class="relative w-80 bg-gray-800 text-white rounded-2xl p-6 overflow-hidden inverted-radius">
+            <h2 class="text-xl font-bold leading-tight text-left">
+              Keamanan<br>Data & Privasi
+            </h2>
+            <div class="flex items-center mt-4 space-x-4 text-white justify-center md:justify-start">
+              <div class="flex items-center space-x-2">
+                <span><i class="fa-regular fa-note-sticky text-green-neon"></i></span>
+                <span>17 Soal</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <span><i class="fa-solid fa-chart-simple text-green-neon"></i></span>
+                <span>Tingkat: Mudah</span>
+              </div>
+            </div>
+            <a href=""
+              class="mt-6 w-full border border-green-neon text-green-neon py-2 rounded-lg hover:bg-green-400 hover:text-gray-900 transition inline-block text-center">
+              Mulai Pelatihan
+            </a>
+          </div>
+          <div class="relative w-80 bg-gray-800 text-white rounded-2xl p-6 overflow-hidden inverted-radius">
+            <h2 class="text-xl font-bold leading-tight text-left">
+              Etika & Kepatuhan<br>keamanan siber
+            </h2>
+            <div class="flex items-center mt-4 space-x-4 text-white justify-center md:justify-start">
+              <div class="flex items-center space-x-2">
+                <span><i class="fa-regular fa-note-sticky text-green-neon"></i></span>
+                <span>17 Soal</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <span><i class="fa-solid fa-chart-simple text-green-neon"></i></span>
+                <span>Tingkat: Mudah</span>
+              </div>
+            </div>
+            <a href=""
+              class="mt-6 w-full border border-green-neon text-green-neon py-2 rounded-lg hover:bg-green-400 hover:text-gray-900 transition inline-block text-center">
+              Mulai Pelatihan
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TESTIMONI -->
+      <div class="border border-green-neon py-6 md:py-0">
+        <section class="flex flex-col md:flex-row items-center justify-between px-10">
+            <!-- Bagian Kiri -->
+            <div class="w-full md:w-2/5 text-white pr-1">
+                <h4 class="text-green-neon text-sm font-semibold">TESTIMONI</h4>
+                <h2 class="text-2xl font-bold mt-2">
+                    Keamanan Digital kini menjadi lebih <span class="underline">mudah dipahami</span>
+                </h2>
+                <p class="text-gray-400 mt-2">
+                    Pengguna kami mendapatkan wawasan baru tentang keamanan siber dan cara melindungi data mereka.
+                </p>
+                
+                <!-- Navigasi -->
+                <div class="flex space-x-3 mt-5">
+                  <button class="swiper-button-prev-custom bg-white text-black p-2 rounded-full shadow-md">
+                      &#10094;
+                  </button>
+                  <button class="swiper-button-next-custom bg-white text-black p-2 rounded-full shadow-md">
+                      &#10095;
+                  </button>
+              </div>
+            </div>
+    
+            <!-- Bagian Slider -->
+            <div class="w-full md:w-3/5 mt-8 md:mt-0">
+                <div class="swiper mySwiper">
+                  
+                    <div class="swiper-wrapper">
+                        <!-- Card 1 -->
+                        <div class="swiper-slide bg-white rounded-lg p-6 shadow-md w-full flex flex-col min-h-[250px]">
+  
+                            <div class="flex items-center space-x-1 text-yellow-400">
+                                ★★★★★
+                            </div>
+                            <p class="text-gray-700 mt-2">
+                                Sekarang saya lebih paham bagaimana cara melindungi akun saya dari peretas.
+                            </p>
+                            <div class="flex items-center mt-4">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" class="w-10 h-10 rounded-full">
+                                <div class="ml-3">
+                                    <h4 class="font-bold">Khairunnisa</h4>
+                                    <p class="text-gray-500 text-sm">Lorem Ipsum is</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Card 2 -->
+                        <div class="swiper-slide bg-white rounded-lg p-6 shadow-md w-full flex flex-col min-h-[250px]">
+  
+                            <div class="flex items-center space-x-1 text-yellow-400">
+                                ★★★★★
+                            </div>
+                            <p class="text-gray-700 mt-2">
+                                Materi yang diberikan sangat mudah dipahami. Saya lebih bijak dalam bersosial!
+                            </p>
+                            <div class="flex items-center mt-4">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" class="w-10 h-10 rounded-full">
+                                <div class="ml-3">
+                                    <h4 class="font-bold">Rama</h4>
+                                    <p class="text-gray-500 text-sm">CEO TokPed</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Card 3 -->
+                        <div class="swiper-slide bg-white rounded-lg p-6 shadow-md w-full flex flex-col min-h-[250px]">
+  
+                            <div class="flex items-center space-x-1 text-yellow-400">
+                                ★★★★★
+                            </div>
+                            <p class="text-gray-700 mt-2">
+                              Sekarang saya lebih paham bagaimana cara melindungi akun saya dari peretas.
+                            </p>
+                            <div class="flex items-center mt-4">
+                                <img src="https://randomuser.me/api/portraits/women/30.jpg" class="w-10 h-10 rounded-full">
+                                <div class="ml-3">
+                                    <h4 class="font-bold">Novita</h4>
+                                    <p class="text-gray-500 text-sm">Lorem Ipsum is</p>
+                                </div>
+                            </div>
+                        </div>
+  
+                        <!-- Card 4 -->
+                        <div class="swiper-slide bg-white rounded-lg p-6 shadow-md w-full flex flex-col min-h-[250px]">
+  
+                            <div class="flex items-center space-x-1 text-yellow-400">
+                                ★★★★★
+                            </div>
+                            <p class="text-gray-700 mt-2">
+                              Materi yang diberikan sangat mudah dipahami. Saya lebih bijak dalam bersosial!
+                            </p>
+                            <div class="flex items-center mt-4">
+                                <img src="https://randomuser.me/api/portraits/men/25.jpg" class="w-10 h-10 rounded-full">
+                                <div class="ml-3">
+                                    <h4 class="font-bold">Djauharil</h4>
+                                    <p class="text-gray-500 text-sm">Lorem Ipsum is</p>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+          </section>
+      </div>
+  
+      <!-- ARTIKEL -->
+      <div class="border border-green-neon py-6 md:py-0">
+        <div class="text-center">
+            <h2 class="text-green-400 text-sm font-semibold">ARTIKEL</h2>
+            <h3 class="text-white text-2xl font-bold">Tetap aman di dunia digital, temukan wawasan terbaru!</h3>
+        </div>
+        <div class="mt-8 flex flex-wrap justify-center gap-12">
+            <!-- Berita 1 -->
+            <div class="bg-[#1e293b] border-2 border-green-neon rounded-lg p-4 max-w-72">
+                <div class="w-full h-[140px] overflow-hidden rounded-md">
+                    <img src="asset/article-1.png" alt="Hacker" class="w-full h-full object-cover">
+                </div>
+                <div class="flex items-center text-green-neon text-sm mt-3 gap-x-3">
+                  <span class="flex items-center mr-3">
+                    <i class="fa-solid fa-users"></i>&nbsp;2.5k
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-clock"></i>&nbsp;23 Februari 2025
+                  </span>
+                </div>
+                <h4 class="text-white font-semibold mt-2">Hacker China Berhasil Curi Data dan Sadap Jutaan Warga Amerika!</h4>
+                <p class="text-gray-400 text-sm mt-1">Skandal keamanan siber terbesar dalam sejarah Amerika Serikat terungkap. 
+                  <a href="article/news/heboh-hacker-china-berhasil-curi-data-dan-sadap-jutaan-warga-amerika.html" target="_blank" class="text-green-400 font-semibold">Baca Selengkapnya ....</a>
+                </p>
+            </div>
+            <!-- Berita 2 -->
+            <div class="bg-[#1e293b] border-2 border-green-neon rounded-lg p-4 max-w-72">
+                <div class="w-full h-[140px] overflow-hidden rounded-md">
+                    <img src="asset/article-2.png" alt="Serangan Siber" class="w-full h-full object-cover">
+                </div>
+                <div class="flex items-center text-green-neon text-sm mt-3 gap-x-3">
+                  <span class="flex items-center mr-3">
+                    <i class="fa-solid fa-users"></i>&nbsp;2.5k
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-clock"></i>&nbsp;23 Februari 2025
+                  </span>
+                </div>
+                <h4 class="text-white font-semibold mt-2">Pakar Ungkap 19 Juta Serangan Siber 'Teror' RI Sepanjang 2024</h4>
+                <p class="text-gray-400 text-sm mt-1">Perusahaan keamanan siber Kaspersky menemukan 19.171.977 upaya 
+                  <a href="/article/news/pakar-ungkap-19-juta-serangan-siber-teror-ri-sepanjang-2024.html" target="_blank" class="text-green-400 font-semibold">Baca Selengkapnya ....</a>
+                </p>
+            </div>
+            <!-- Berita 3 -->
+            <div class="bg-[#1e293b] border-2 border-green-neon rounded-lg p-4 max-w-72">
+                <div class="w-full h-[140px] overflow-hidden rounded-md">
+                    <img src="asset/article-3.png" alt="Backup Sistem" class="w-full h-full object-cover">
+                </div>
+                <div class="flex items-center text-green-neon text-sm mt-3 gap-x-3">
+                    <span class="flex items-center mr-3">
+                      <i class="fa-solid fa-users"></i>&nbsp;2.5k
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-clock"></i>&nbsp;23 Februari 2025
+                    </span>
+                </div>
+                <h4 class="text-white font-semibold mt-2">Pentingnya Sistem Backup Andal di Tengah Serangan Siber yang 'Brutal'</h4>
+                <p class="text-gray-400 text-sm mt-1">Serangan siber, khususnya ransomware, menunjukkan tren 
+                  <a href="/article/news/pentingnya-sistem-backup-andal-di-tengah-serangan-siber-yang-makin-brutal.html" target="_blank" class="text-green-400 font-semibold">Baca Selengkapnya ....</a>
+                </p>
+            </div>
+        </div>
+      </div>
+  
+      <!-- CARA PENGGUNAAN -->
+      <div class="text-white border border-green-neon py-6 md:py-0">
+        <section class="px-6">
+          <div class="flex flex-col md:flex-row items-center md:items-start py-6 px-6">
+            <div class="md:w-4/5">
+              <h2 class="text-green-400 font-semibold text-xl md:text-2xl">CARA PENGGUNAAN</h2>
+              <p class="text-white text-lg max-w-2xl mt-2">
+                Ikuti langkah sederhana ini untuk memulai perjalanan hebat bersama kami.
+              </p>
+            </div>
+            <div class="md:w-1/5 flex md:justify-end">
+              <a href="training.html" class="mt-4 md:mt-0 bg-sea-blue text-white px-6 py-3 rounded-full shadow-lg">
+                Mulai sekarang
+              </a>
+            </div>
+          </div>
+      
+          <div class="bg-white rounded-lg p-8 shadow-md max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0">
+            <div class="flex flex-col items-center text-center relative md:border-r md:border-gray-300 md:pr-6">
+              <div class="relative">
+                <span class="text-4xl font-bold text-gray-600">01</span>
+                <i class="fa-solid fa-book-bookmark text-navy-blue text-3xl absolute top-5 left-6"></i>
+              </div>
+              <h4 class="font-bold mt-4 text-gray-900 text-lg">Pilih pelatihan yang ingin dipelajari</h4>
+              <p class="text-gray-600 text-sm mt-2">Jelajahi kategori pelatihan yang tersedia dan pilih topik yang paling sesuai dengan minat atau kebutuhan Anda.</p>
+            </div>
+      
+            <div class="flex flex-col items-center text-center relative md:border-r md:border-gray-300 md:px-6">
+              <div class="relative">
+                <span class="text-4xl font-bold text-gray-600">02</span>
+                <i class="fa-solid fa-book-open-reader text-navy-blue text-3xl absolute top-5 left-7"></i>
+              </div>
+              <h4 class="font-bold mt-4 text-gray-900 text-lg">Pelajari materi yang disediakan</h4>
+              <p class="text-gray-600 text-sm mt-2">Akses materi yang dirancang untuk membantu Anda memahami konsep dengan mudah dan menyenangkan.</p>
+            </div>
+      
+            <div class="flex flex-col items-center text-center relative md:pl-6">
+              <div class="relative">
+                <span class="text-4xl font-bold text-gray-600">03</span>
+                <i class="fa-solid fa-list-check text-navy-blue text-3xl absolute top-5 left-9"></i>
+              </div>
+              <h4 class="font-bold mt-4 text-gray-900 text-lg">Mulai kuis dan capai nilai terbaik!</h4>
+              <p class="text-gray-600 text-sm mt-2">Uji pemahaman Anda dengan mengikuti kuis. Kumpulkan skor terbaik dan raih pencapaian baru dalam perjalananmu!</p>
+            </div>
+          </div>
+        </section>
+      </div>
+  
+      <!-- KOMUNITAS -->
+      <section class="px-6 sm:px-8 md:px-12 border border-green-neon py-6 md:py-0">
+        <div class="container mx-auto max-w-6xl">
+          <div class="relative z-10 overflow-hidden rounded-lg bg-cover bg-center bg-no-repeat py-6 px-6 sm:px-8 md:p-[30px] flex flex-col items-center text-center shadow-green-neon-opacity"
+               style="background-image: url('asset/hero-community.jpg');">
+            <div class="flex flex-col">
+              <span class="mb-4 text-lg sm:text-xl md:text-2xl font-semibold leading-tight text-white sm:mb-6">
+                Bergabunglah dengan Komunitas<br><i>Cyber Security</i> <span class="font-bold">{ Secure.byte }</span>!
+              </span>
+              <span class="block mb-4 text-base sm:text-lg text-white">
+                Dapatkan wawasan, dukungan, dan <b>terhubung</b> dengan para ahli<br>serta pengguna lain yang peduli dengan keamanan digital.
+              </span>
+            </div>
+      
+            <div class="flex flex-wrap gap-4 mt-4 justify-center md:justify-start">
+              <a href="javascript:void(0)"
+                class="inline-block py-3 text-base text-white font-medium transition rounded-full bg-green-neon px-6 sm:px-7 w-full sm:w-auto text-center">
+                <i class="fa-brands fa-discord text-lg align-middle"></i> <span class="align-middle">Gabung Komunitas</span>
+              </a>
+              <a href="javascript:void(0)"
+                class="py-3 text-base font-medium text-white transition rounded-full border border-green-neon bg-secondary px-6 sm:px-7 hover:bg-opacity-90 w-full sm:w-auto text-center">
+                Mulai Pelatihan
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>    
+  
+      <!-- FOOTER -->
+      <section class="text-white border border-green-neon pt-12 md:py-0">
+  
+        <footer class="bg-navy-blue-opacity py-12 px-6 md:px-16 rounded-t-[70px] border-t-8 border-r-5 border-l-5 border-sea-blue-opacity shadow-sea-blue-opacity">
+          <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+  
+            <!-- Bagian Kiri -->
+            <div>
+                <h2 class="text-3xl font-bold">{ Cyber.b1te }</h2>
+                <div class="mt-12">
+                  <h3 class="font-base">Dapatkan kabar terbaru</h3>
+                  <div class="mt-4 flex items-center border border-sea-blue rounded-md overflow-hidden max-w-[280px] w-full">
+                    <input type="email" placeholder="Masukkan email"
+                        class="flex-1 px-4 py-2 bg-transparent outline-none text-white placeholder-gray-400">
+                    <button class="border-l border-sea-blue px-4 py-2 text-white">
+                        <i class="fas fa-envelope text-sea-blue"></i>
+                    </button>
+                  </div>
+                </div>
+            </div>
+    
+            <!-- Bagian Tengah -->
+            <div>
+              <p class="text-sm leading-6 font-base">
+                Dapatkan wawasan, serta dukungan, lalu terhubung dengan para ahli dan pengguna lain yang peduli dengan keamanan digital.
+              <div class="flex items-center gap-4 mt-6">
+                  <a href="#" class="text-blue-400 text-xl"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="text-blue-400 text-xl"><i class="fab fa-whatsapp"></i></a>
+                  <a href="#" class="text-blue-400 text-xl"><i class="fab fa-discord"></i></a>
+              </div>
+              <p class="text-xs text-gray-400 mt-6">© 2025 Cyber.b1te. All Right Reserved</p>
+            </div>
+    
+            <!-- Bagian Kanan -->
+            <div class="grid grid-cols-2 gap">
+                <div>
+                    <h3 class="font-semibold">Pintas</h3>
+                    <ul class="mt-2 space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Video Demonstrasi</a></li>
+                        <li><a href="#" class="hover:text-white">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-white">Testimoni</a></li>
+                        <li><a href="#" class="hover:text-white">Cara Penggunaan</a></li>
+                        <li><a href="#" class="hover:text-white">Komunitas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold">Pelatihan</h3>
+                    <ul class="mt-2 space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Serangan Siber & Cara Mengatasinya</a></li>
+                        <li><a href="#" class="hover:text-white">Keamanan Data & Privasi</a></li>
+                        <li><a href="#" class="hover:text-white">Keamanan Perangkat & Jaringan</a></li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+
+    </div>
+
+    <div class="gtranslate_wrapper"></div>
+    
+    <script>window.gtranslateSettings = {"default_language":"id","languages":["id","zh-CN","en"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right","float_switcher_open_direction":"bottom"}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var swiper = new Swiper(".mySwiper", {
+          navigation: {
+            nextEl: ".swiper-button-next-custom", 
+            prevEl: ".swiper-button-prev-custom",
+          },
+          loop: true,
+          slidesPerView: 1,
+          spaceBetween: 20,
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            }
+          }
+        });
+      });
+      </script>
+  </body>
+</html>

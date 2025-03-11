@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-navy-blue {
+    background-color: #1A2033;
+}
+
+.bg-navy-blue-opacity {
+    background-color:rgba(26, 32, 51, 0.25);
+}
+
+.bg-sea-blue {
+    background-color: #50A5E4;
+}
+
+.bg-sun-yellow {
+    background-color: #FFCD29;
+}
+
+.shadow-sea-blue-opacity {
+    box-shadow: 0px 10px 20px 20px rgba(80, 164, 228, 0.4);
+}
+
+.shadow-sea-blue-opacity-2 {
+    box-shadow: 0px 0.5px 10px 0.5px rgba(80, 164, 228, 0.3);
+}
+
+.shadow-sea-blue-opacity-3 {
+    box-shadow: 0px 5px 10px 5px rgba(80, 164, 228, 0.25);
+}
+
+.shadow-sun-yellow-opacity-2 {
+    box-shadow: 0px 0.5px 10px 0.5px rgba(255, 205, 41, 0.3);
+}
+
+.shadow-sun-yellow-opacity-3 {
+    box-shadow: 0px 5px 10px 5px rgba(255, 205, 41, 0.25);
+}
+
+.shadow-green-neon-opacity {
+    box-shadow: 
+        0px 10px 20px rgba(10, 206, 137, 0.4),
+        0px 5px 10px rgba(10, 206, 137, 0.2);
+}
+
+.shadow-green-neon-opacity-2 {
+    box-shadow: 0px 0.5px 10px 0.5px rgba(10, 206, 137, 0.3);
+}
+
+.shadow-green-neon-opacity-3 {
+    box-shadow: 0px 5px 10px 5px rgba(10, 206, 137, 0.25);
+}
+
+.bg-green-neon {
+    background-color: #0ACE88;
+}
+
+.border-navy-blue {
+    border-color: #1A2033;
+}
+
+.border-green-neon {
+    border-color: #0ACE88;
+}
+
+.border-sea-blue {
+    border-color: #50A5E4;
+}
+
+.border-sun-yellow {
+    border-color: #FFCD29;
+}
+
+.border-sea-blue-opacity {
+    border-color:rgba(80, 164, 228, 0.5);
+}
+
+.text-navy-blue {
+    color: #1A2033;
+}
+
+.text-green-neon {
+    color: #0ACE88;
+}
+
+.text-sea-blue {
+    color: #50A5E4;
+}
+
+.text-sun-yellow {
+    color: #FFCD29;
+}
+
+.hover\:text-green-neon:hover {
+    color: #0ACE88;
+}
+
+.hover\:bg-green-neon:hover {
+    background-color: #0ACE88;
+}
+
+.hover\:bg-sea-blue:hover {
+    background-color: #50A5E4;
+}
+
+.hover\:bg-sun-yellow:hover {
+    background-color: #FFCD29;
+}
+
+.hover\:border-green-neon:hover {
+    border-color: #0ACE88;
+}
