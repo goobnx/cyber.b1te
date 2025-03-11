@@ -5,19 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artikel</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/src/css/style.css">
-    <style>
-        ul {
-            list-style-type: none;
-        }
-
-        ul li::before {
-            content: "• ";
-        }
-    </style>
 </head>
-<body>
-    <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-navy-blue antialiased">
+<body
+    x-data="
+      {
+        scrolledFromTop: false
+      }
+    "
+    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false">
+
+    <header
+      x-data="
+        {
+          navbarOpen: false,
+        }
+      "
+      :class="scrolledFromTop ? 'fixed z-50 bg-navy-blue shadow-xl backdrop-blur-sm' : 'absolute' "
+      class="top-0 left-0 z-50 w-full fixed bg-navy-blue backdrop-blur-sm">
+      <div class="container mx-auto">
+        <div class="relative flex items-center justify-between mx-4">
+          <div class="max-w-full px-4 w-60">
+            <a href="javascript:void(0)" class="block w-full py-5">
+              <img src="/asset/main_logo.png" alt="logo" class="w-full dark:hidden">
+              <img src="/asset/main_logo.png" alt="logo" class="hidden w-full dark:block">
+            </a>
+          </div>
+          <div class="flex items-center justify-between w-full px-4">
+            <div>
+              <button
+                @click="navbarOpen = !navbarOpen"
+                :class="navbarOpen && 'navbarTogglerActive'"
+                id="navbarToggler"
+                class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden">
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
+              </button>
+              <nav
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-90"
+                x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-90"
+                :class="!navbarOpen && 'hidden'"
+                id="navbarCollapse"
+                class="absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-black bg-opacity-80 backdrop-blur-sm py-5 px-6 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:shadow-none">
+                <ul class="block lg:flex">
+                  <li>
+                    <a href="/index.html"
+                      class="flex py-2 text-base font-medium text-white dark:text-white hover:text-green-neon lg:ml-12 lg:inline-flex">
+                       Beranda
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/training.html"
+                      class="flex py-2 text-base font-medium text-white dark:text-white hover:text-green-neon lg:ml-12 lg:inline-flex">
+                      Pelatihan
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/article.html"
+                      class="flex py-2 text-base font-medium text-white dark:text-white hover:text-green-neon lg:ml-12 lg:inline-flex">
+                      Artikel
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="justify-end hidden pr-16 sm:flex lg:pr-0">
+              <div class="relative"> 
+                  <input type="text" id="searchText" class="py-3 text-base font-medium text-black rounded-lg px-7 border-2 border-white"
+                  placeholder="Pencarian" autocomplete="off" oninput="searchText()">                   
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-24 bg-navy-blue antialiased" id="contentValue">
         <div class="container mx-auto px-4">
             <article class="mx-auto w-full max-w-full sm:max-w-2xl lg:max-w-4xl text-white">
                 <header class="mb-4 lg:mb-6 text-center">
@@ -87,12 +157,12 @@
                     Beberapa tips bisa dilakukan untuk mengamankan diri dan bisnis dari paparan serangan siber. Berikut beberapa tipsnya:
                 </p>
                 <ul class=" pl-6 leading-relaxed sm:leading-loose text-base">
-                    <li>Jangan mengunduh dan memasang aplikasi dari sumber yang tidak terpercaya.</li>
-                    <li>Terus pantau dark web secara proaktif untuk mencari tanda-tanda aktivitas kejahatan dunia maya yang dapat mengancam aset digital.</li>
-                    <li>Jangan mengeklik tautan apa pun dari sumber yang tidak dikenal atau iklan daring yang mencurigakan.</li>
-                    <li>Buat kata sandi yang kuat dan unik, termasuk campuran huruf kecil dan huruf besar, angka, dan tanda baca, serta aktifkan autentikasi dua faktor.</li>
-                    <li>Selalu memasang pembaruan.</li>
-                    <li>Abaikan pesan yang meminta untuk menonaktifkan sistem keamanan untuk kantor atau solusi keamanan dunia maya.</li>
+                    <li>- Jangan mengunduh dan memasang aplikasi dari sumber yang tidak terpercaya.</li>
+                    <li>- Terus pantau dark web secara proaktif untuk mencari tanda-tanda aktivitas kejahatan dunia maya yang dapat mengancam aset digital.</li>
+                    <li>- Jangan mengeklik tautan apa pun dari sumber yang tidak dikenal atau iklan daring yang mencurigakan.</li>
+                    <li>- Buat kata sandi yang kuat dan unik, termasuk campuran huruf kecil dan huruf besar, angka, dan tanda baca, serta aktifkan autentikasi dua faktor.</li>
+                    <li>- Selalu memasang pembaruan.</li>
+                    <li>- Abaikan pesan yang meminta untuk menonaktifkan sistem keamanan untuk kantor atau solusi keamanan dunia maya.</li>
                 </ul><br>
 
                 <p class="text-justify text-base leading-relaxed sm:leading-loose">
@@ -103,6 +173,63 @@
                 </p>
             </article>
         </div>
+
+        <section class="text-white bg-navy-blue md:py-0 mt-20">
+  
+            <footer class="bg-navy-blue-opacity py-12 px-6 md:px-16 rounded-t-[70px] border-t-8 border-r-5 border-l-5 border-sea-blue-opacity shadow-sea-blue-opacity">
+              <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+                <!-- Bagian Kiri -->
+                <div>
+                    <h2 class="text-3xl font-bold">{ Cyber.b1te }</h2>
+                    <div class="mt-12">
+                      <h3 class="font-base">Dapatkan kabar terbaru</h3>
+                      <div class="mt-4 flex items-center border border-sea-blue rounded-md overflow-hidden max-w-[280px] w-full">
+                        <input type="email" placeholder="Masukkan email" required
+                            class="flex-1 px-4 py-2 bg-transparent outline-none text-white placeholder-gray-400">
+                        <button type="submit" class="border-l border-sea-blue p-2 flex items-center justify-center w-10 h-10">
+                            <i class="fas fa-envelope text-sea-blue text-base sm:text-lg"></i>
+                        </button>
+                      </div>
+                    </div>
+                </div>
+        
+                <!-- Bagian Tengah -->
+                <div>
+                  <p class="text-sm leading-6 font-base">
+                    Dapatkan wawasan, serta dukungan, lalu terhubung dengan para ahli dan pengguna lain yang peduli dengan keamanan digital.
+                  <div class="flex items-center gap-4 mt-6">
+                      <a href="" class="text-blue-400 text-xl"><i class="fab fa-instagram"></i></a>
+                      <a href="" class="text-blue-400 text-xl"><i class="fab fa-whatsapp"></i></a>
+                      <a href="" class="text-blue-400 text-xl"><i class="fab fa-discord"></i></a>
+                  </div>
+                  <p class="text-xs text-gray-400 mt-6">© 2025 cyber.b1te. All Right Reserved</p>
+                </div>
+        
+                <!-- Bagian Kanan -->
+                <div class="grid grid-cols-2 gap">
+                    <div>
+                        <h3 class="font-semibold">Pintas</h3>
+                        <ul class="mt-2 space-y-2 text-sm text-gray-400">
+                            <li><a href="index.html#section_video" class="hover:text-white">Video Demonstrasi</a></li>
+                            <li><a href="index.html#section_about" class="hover:text-white">Tentang Kami</a></li>
+                            <li><a href="index.html#section_testimonials" class="hover:text-white">Testimoni</a></li>
+                            <li><a href="index.html#section_howto" class="hover:text-white">Cara Penggunaan</a></li>
+                            <li><a href="index.html#section_community" class="hover:text-white">Komunitas</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">Pelatihan</h3>
+                        <ul class="mt-2 space-y-2 text-sm text-gray-400">
+                            <li><a href="/training/material-1.html" class="hover:text-white">Serangan Siber & Cara Mengatasinya</a></li>
+                            <li><a href="/training/material-2.html" class="hover:text-white">Keamanan Data & Privasi</a></li>
+                            <li><a href="/training/material-3.html" class="hover:text-white">Etika & Kepatuhan Keamanan Siber</a></li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+            </footer>
+        </section>
     </main>
     
     
@@ -111,5 +238,7 @@
     <script>window.gtranslateSettings = {"default_language":"id","languages":["id","en","zh-CN"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right","float_switcher_open_direction":"bottom"}</script>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="/src/js/searchText.js"></script>
+    <script src="/src/js/activeNavbar.js"></script>
 </body>
 </html>
