@@ -119,8 +119,8 @@
             </div>
             <div class="justify-end hidden pr-16 sm:flex lg:pr-0">
               <div class="relative"> 
-                  <input type="text" class="py-3 text-base font-medium text-black rounded-lg px-7 border-2 border-white"
-                  placeholder="Pencarian">                   
+                  <input type="text" id="searchText" class="py-3 text-base font-medium text-black rounded-lg px-7 border-2 border-white"
+                  placeholder="Pencarian" oninput="searchText()">                   
               </div>
             </div>
           </div>
@@ -128,7 +128,7 @@
       </div>
     </header>
 
-    <div class="space-y-6 md:space-y-24 bg-navy-blue">
+    <div id="contentValue" class="space-y-6 md:space-y-24 bg-navy-blue">
 
       <!-- HERO -->
       <div class="relative px-12 pt-24 border border-green-neon">
@@ -658,5 +658,48 @@
             }, 600); // Delay agar video mulai setelah scrolling selesai
           });
       </script>
+
+     <script>
+      function searchText() {
+      let input = document.getElementById("searchText").value.toLowerCase();
+      let contentValue = document.getElementById("contentValue");
+      
+      // Reset to original state first
+      if (!contentValue.originalHTML) {
+          contentValue.originalHTML = contentValue.innerHTML;
+      } else if (!input) {
+          contentValue.innerHTML = contentValue.originalHTML;
+          return;
+      }
+      
+      // Create a document fragment to work with the DOM structure
+      let tempDiv = document.createElement('div');
+      tempDiv.innerHTML = contentValue.originalHTML;
+      
+      // Function to recursively process text nodes only
+      function highlightTextNodes(node) {
+          if (node.nodeType === Node.TEXT_NODE) {
+              if (node.textContent.toLowerCase().includes(input)) {
+                  let wrapper = document.createElement('span');
+                  wrapper.innerHTML = node.textContent.replace(
+                      new RegExp(`(${input})`, 'gi'), 
+                      '<span class="bg-green-neon text-black">$1</span>'
+                  );
+                  node.parentNode.replaceChild(wrapper, node);
+              }
+          } else {
+              // Process child nodes
+              Array.from(node.childNodes).forEach(highlightTextNodes);
+          }
+      }
+      
+      // Apply highlighting to text nodes only
+      highlightTextNodes(tempDiv);
+      
+      // Update content
+      contentValue.innerHTML = tempDiv.innerHTML;
+  }
+     </script>
+
   </body>
 </html>
