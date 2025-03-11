@@ -113,3 +113,11 @@ body {
 .hover\:border-green-neon:hover {
     border-color: #0ACE88;
 }
+
+.border-l-5 {
+    border-left-width: 5px;
+} 
+
+.border-r-5 {
+    border-right-width: 5px;
+}

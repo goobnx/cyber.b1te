@@ -6,7 +6,7 @@
     <title>cyber.b1te - Beranda</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="/src/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <style>
       .swiper-button-next-custom, 
@@ -19,14 +19,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-      }
-
-      .border-l-5 {
-        border-left-width: 5px;
-      } 
-
-      .border-r-5 {
-        border-right-width: 5px;
       }
 
       .inverted-radius {
@@ -70,8 +62,8 @@
         <div class="relative flex items-center justify-between mx-4">
           <div class="max-w-full px-4 w-60">
             <a href="javascript:void(0)" class="block w-full py-5">
-              <img src="asset/main_logo.png" alt="logo" class="w-full dark:hidden">
-              <img src="asset/main_logo.png" alt="logo" class="hidden w-full dark:block">
+              <img src="/asset/main_logo.png" alt="logo" class="w-full dark:hidden">
+              <img src="/asset/main_logo.png" alt="logo" class="hidden w-full dark:block">
             </a>
           </div>
           <div class="flex items-center justify-between w-full px-4">
@@ -97,19 +89,19 @@
                 class="absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-black bg-opacity-80 backdrop-blur-sm py-5 px-6 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:shadow-none">
                 <ul class="block lg:flex">
                   <li>
-                    <a href="index.html"
+                    <a href="/index.html"
                       class="flex py-2 text-base font-medium text-white dark:text-white hover:text-green-neon lg:ml-12 lg:inline-flex">
                        Beranda
                     </a>
                   </li>
                   <li>
-                    <a href="training.html"
+                    <a href="/training.html"
                       class="flex py-2 text-base font-medium text-white dark:text-white hover:text-green-neon lg:ml-12 lg:inline-flex">
                       Pelatihan
                     </a>
                   </li>
                   <li>
-                    <a href="article.html"
+                    <a href="/article.html"
                       class="flex py-2 text-base font-medium text-white dark:text-white hover:text-green-neon lg:ml-12 lg:inline-flex">
                       Artikel
                     </a>
@@ -120,7 +112,7 @@
             <div class="justify-end hidden pr-16 sm:flex lg:pr-0">
               <div class="relative"> 
                   <input type="text" id="searchText" class="py-3 text-base font-medium text-black rounded-lg px-7 border-2 border-white"
-                  placeholder="Pencarian" oninput="searchText()">                   
+                  placeholder="Pencarian" autocomplete="off" oninput="searchText()">                   
               </div>
             </div>
           </div>
@@ -131,7 +123,7 @@
     <div id="contentValue" class="space-y-6 md:space-y-24 bg-navy-blue">
 
       <!-- HERO -->
-      <div class="relative px-12 pt-24 border border-green-neon">
+      <div class="relative px-12 pt-24">
         <div class="container mx-auto">
           <div class="flex flex-col-reverse lg:flex-row items-center lg:items-center lg:gap-10 xl:gap-16">
             
@@ -165,7 +157,7 @@
       </div>
       
       <!-- VIDEO -->
-      <div class="relative antialiased border border-green-neon py-6 md:py-0" id="section_video">
+      <div class="relative antialiased py-6 md:py-0" id="section_video">
         <main class="relative flex flex-col justify-center overflow-hidden">
             <div class="w-full max-w-6xl mx-auto px-4 md:px-6 ">
               <div class="flex justify-center">
@@ -178,7 +170,7 @@
       </div>
   
       <!-- TENTANG KAMI -->
-      <section class="flex text-white px-6 border border-green-neon py-6 md:py-0">
+      <section class="flex text-white px-6 py-6 md:py-0" id="section_about">
         <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-5 items-center lg:items-start">
             
             <div class="lg:w-7/12 space-y-3 text-center lg:text-left">
@@ -239,7 +231,7 @@
       </section>
   
       <!-- PELATIHAN -->
-      <div class="px-4 border border-green-neon py-6 md:py-0">
+      <div class="px-4 py-6 md:py-0">
         <div class="text-center pb-5">
           <h2 class="text-green-neon text-lg font-medium">PELATIHAN</h2>
           <h1 class="text-3xl text-white font-bold mb-6">
@@ -261,7 +253,7 @@
                 <span>Tingkat: Mudah</span>
               </div>
             </div>
-            <a href="training/material-1.html"
+            <a href="/training/material-1.html"
               class="mt-6 w-full border border-green-neon text-green-neon py-2 rounded-lg hover:bg-green-400 hover:text-gray-900 transition inline-block text-center">
               Mulai Pelatihan
             </a>
@@ -280,7 +272,7 @@
                 <span>Tingkat: Mudah</span>
               </div>
             </div>
-            <a href=""
+            <a href="/training/material-2.html"
               class="mt-6 w-full border border-green-neon text-green-neon py-2 rounded-lg hover:bg-green-400 hover:text-gray-900 transition inline-block text-center">
               Mulai Pelatihan
             </a>
@@ -299,7 +291,7 @@
                 <span>Tingkat: Mudah</span>
               </div>
             </div>
-            <a href=""
+            <a href="/training/material-3.html"
               class="mt-6 w-full border border-green-neon text-green-neon py-2 rounded-lg hover:bg-green-400 hover:text-gray-900 transition inline-block text-center">
               Mulai Pelatihan
             </a>
@@ -308,7 +300,7 @@
       </div>
 
       <!-- TESTIMONI -->
-      <div class="border border-green-neon py-6 md:py-0">
+      <div class="py-6 md:py-0" id="section_testimonials">
         <section class="flex flex-col md:flex-row items-center justify-between px-10">
             <!-- Bagian Kiri -->
             <div class="w-full md:w-2/5 text-white pr-1">
@@ -414,7 +406,7 @@
       </div>
   
       <!-- ARTIKEL -->
-      <div class="border border-green-neon py-6 md:py-0">
+      <div class="py-6 md:py-0">
         <div class="text-center">
             <h2 class="text-green-400 text-sm font-semibold">ARTIKEL</h2>
             <h3 class="text-white text-2xl font-bold">Tetap aman di dunia digital, temukan wawasan terbaru!</h3>
@@ -478,7 +470,7 @@
       </div>
   
       <!-- CARA PENGGUNAAN -->
-      <div class="text-white border border-green-neon py-6 md:py-0">
+      <div class="text-white py-6 md:py-0" id="section_howto">
         <section class="px-6">
           <div class="flex flex-col md:flex-row items-center md:items-start py-6 px-6">
             <div class="md:w-4/5">
@@ -526,7 +518,7 @@
       </div>
   
       <!-- KOMUNITAS -->
-      <section class="px-6 sm:px-8 md:px-12 border border-green-neon py-6 md:py-0">
+      <section class="px-6 sm:px-8 md:px-12 py-6 md:py-0" id="section_community">
         <div class="container mx-auto max-w-6xl">
           <div class="relative z-10 overflow-hidden rounded-lg bg-cover bg-center bg-no-repeat py-6 px-6 sm:px-8 md:p-[30px] flex flex-col items-center text-center shadow-green-neon-opacity"
                style="background-image: url('asset/hero-community.jpg');">
@@ -554,7 +546,7 @@
       </section>    
   
       <!-- FOOTER -->
-      <section class="text-white border border-green-neon pt-12 md:py-0">
+      <section class="text-white pt-12 md:py-0">
   
         <footer class="bg-navy-blue-opacity py-12 px-6 md:px-16 rounded-t-[70px] border-t-8 border-r-5 border-l-5 border-sea-blue-opacity shadow-sea-blue-opacity">
           <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -579,31 +571,31 @@
               <p class="text-sm leading-6 font-base">
                 Dapatkan wawasan, serta dukungan, lalu terhubung dengan para ahli dan pengguna lain yang peduli dengan keamanan digital.
               <div class="flex items-center gap-4 mt-6">
-                  <a href="#" class="text-blue-400 text-xl"><i class="fab fa-instagram"></i></a>
-                  <a href="#" class="text-blue-400 text-xl"><i class="fab fa-whatsapp"></i></a>
-                  <a href="#" class="text-blue-400 text-xl"><i class="fab fa-discord"></i></a>
+                  <a href="" class="text-blue-400 text-xl"><i class="fab fa-instagram"></i></a>
+                  <a href="" class="text-blue-400 text-xl"><i class="fab fa-whatsapp"></i></a>
+                  <a href="" class="text-blue-400 text-xl"><i class="fab fa-discord"></i></a>
               </div>
-              <p class="text-xs text-gray-400 mt-6">© 2025 Cyber.b1te. All Right Reserved</p>
+              <p class="text-xs text-gray-400 mt-6">© 2025 cyber.b1te. All Right Reserved</p>
             </div>
     
             <!-- Bagian Kanan -->
             <div class="grid grid-cols-2 gap">
                 <div>
                     <h3 class="font-semibold">Pintas</h3>
-                    <ul class="mt-2 space-y-2 text-sm text-gray-400">
-                        <li><a href="#" class="hover:text-white">Video Demonstrasi</a></li>
-                        <li><a href="#" class="hover:text-white">Tentang Kami</a></li>
-                        <li><a href="#" class="hover:text-white">Testimoni</a></li>
-                        <li><a href="#" class="hover:text-white">Cara Penggunaan</a></li>
-                        <li><a href="#" class="hover:text-white">Komunitas</a></li>
+                    <ul class="mt-2 space-y-2 text-sm text-gray-400 pintas">
+                        <li><a href="#section_video" class="hover:text-white">Video Demonstrasi</a></li>
+                        <li><a href="#section_about" class="hover:text-white">Tentang Kami</a></li>
+                        <li><a href="#section_testimonials" class="hover:text-white">Testimoni</a></li>
+                        <li><a href="#section_howto" class="hover:text-white">Cara Penggunaan</a></li>
+                        <li><a href="#section_community" class="hover:text-white">Komunitas</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="font-semibold">Pelatihan</h3>
                     <ul class="mt-2 space-y-2 text-sm text-gray-400">
-                        <li><a href="#" class="hover:text-white">Serangan Siber & Cara Mengatasinya</a></li>
-                        <li><a href="#" class="hover:text-white">Keamanan Data & Privasi</a></li>
-                        <li><a href="#" class="hover:text-white">Keamanan Perangkat & Jaringan</a></li>
+                        <li><a href="/training/material-1.html" class="hover:text-white">Serangan Siber & Cara Mengatasinya</a></li>
+                        <li><a href="/training/material-2.html" class="hover:text-white">Keamanan Data & Privasi</a></li>
+                        <li><a href="/training/material-3.html" class="hover:text-white">Etika & Kepatuhan Keamanan Siber</a></li>
                     </ul>
                 </div>
             </div>
@@ -620,8 +612,10 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="src/js/sliderTestimonial.js"></script>
-    <script src="src/js/autoPlayVideo.js"></script>
-    <script src="src/js/searchText.js"></script>
+    <script src="/src/js/sliderTestimonial.js"></script>
+    <script src="/src/js/autoPlayVideo.js"></script>
+    <script src="/src/js/searchText.js"></script>
+    <script src="/src/js/hrefToSection.js"></script>
+    <script src="/src/js/activeNavbar.js"></script>
   </body>
 </html>

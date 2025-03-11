@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FusionTech 2025 - Artikel</title>
+    <title>cyber.b1te - Artikel</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -80,6 +80,88 @@
         </nav>
     </section>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <section class="text-white bg-navy-blue pt-12 md:py-0">
+  
+        <footer class="bg-navy-blue-opacity py-12 px-6 md:px-16 rounded-t-[70px] border-t-8 border-r-5 border-l-5 border-sea-blue-opacity shadow-sea-blue-opacity">
+          <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+  
+            <!-- Bagian Kiri -->
+            <div>
+                <h2 class="text-3xl font-bold">{ Cyber.b1te }</h2>
+                <div class="mt-12">
+                  <h3 class="font-base">Dapatkan kabar terbaru</h3>
+                  <div class="mt-4 flex items-center border border-sea-blue rounded-md overflow-hidden max-w-[280px] w-full">
+                    <input type="email" placeholder="Masukkan email" required
+                        class="flex-1 px-4 py-2 bg-transparent outline-none text-white placeholder-gray-400">
+                    <button type="submit" class="border-l border-sea-blue p-2 flex items-center justify-center w-10 h-10">
+                        <i class="fas fa-envelope text-sea-blue text-base sm:text-lg"></i>
+                    </button>
+                  </div>
+                </div>
+            </div>
+    
+            <!-- Bagian Tengah -->
+            <div>
+              <p class="text-sm leading-6 font-base">
+                Dapatkan wawasan, serta dukungan, lalu terhubung dengan para ahli dan pengguna lain yang peduli dengan keamanan digital.
+              <div class="flex items-center gap-4 mt-6">
+                  <a href="" class="text-blue-400 text-xl"><i class="fab fa-instagram"></i></a>
+                  <a href="" class="text-blue-400 text-xl"><i class="fab fa-whatsapp"></i></a>
+                  <a href="" class="text-blue-400 text-xl"><i class="fab fa-discord"></i></a>
+              </div>
+              <p class="text-xs text-gray-400 mt-6">© 2025 cyber.b1te. All Right Reserved</p>
+            </div>
+    
+            <!-- Bagian Kanan -->
+            <div class="grid grid-cols-2 gap">
+                <div>
+                    <h3 class="font-semibold">Pintas</h3>
+                    <ul class="mt-2 space-y-2 text-sm text-gray-400">
+                        <li><a href="index.html#section_video" class="hover:text-white">Video Demonstrasi</a></li>
+                        <li><a href="index.html#section_about" class="hover:text-white">Tentang Kami</a></li>
+                        <li><a href="index.html#section_testimonials" class="hover:text-white">Testimoni</a></li>
+                        <li><a href="index.html#section_howto" class="hover:text-white">Cara Penggunaan</a></li>
+                        <li><a href="index.html#section_community" class="hover:text-white">Komunitas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold">Pelatihan</h3>
+                    <ul class="mt-2 space-y-2 text-sm text-gray-400">
+                        <li><a href="/training/material-1.html" class="hover:text-white">Serangan Siber & Cara Mengatasinya</a></li>
+                        <li><a href="/training/material-2.html" class="hover:text-white">Keamanan Data & Privasi</a></li>
+                        <li><a href="/training/material-3.html" class="hover:text-white">Etika & Kepatuhan Keamanan Siber</a></li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  // Check if there's a hash in the URL
+  if (window.location.hash) {
+    // Get the target element
+    const targetId = window.location.hash.substring(1);
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      // Give the browser a moment to fully render the page
+      setTimeout(function() {
+        // Calculate position with offset for header
+        const headerOffset = 110; // Adjust based on your header height
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        // Scroll smoothly to the element
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }, 100);
+    }
+  }
+});
+      </script>
 </body>
 </html>
