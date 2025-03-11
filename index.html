@@ -642,13 +642,13 @@
       </script>
       <script>
         document.getElementById("btnScrollToSectionVideo").addEventListener("click", function(event) {
-            event.preventDefault(); // Mencegah default behavior dari <a>
+            event.preventDefault();
             
             const targetSection = document.getElementById("section_video");
             const video = document.getElementById("videoAboutUs");
     
             window.scrollTo({
-                top: targetSection.offsetTop - 110, // Sesuaikan jika ada navbar
+                top: targetSection.offsetTop - 110,
                 behavior: "smooth"
             });
 
