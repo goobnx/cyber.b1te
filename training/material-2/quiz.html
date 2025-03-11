@@ -1,0 +1,124 @@
+<!DOCTYPE html> 
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cyber.b1te - Kuis Materi 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/src/css/style.css">
+  </head>
+  <body
+    x-data="
+        {
+            scrolledFromTop: false
+        }
+        "
+        x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+        @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false">
+
+    <header
+      x-data="
+        {
+          navbarOpen: false,
+        }
+      "
+      :class="scrolledFromTop ? 'fixed z-50 bg-navy-blue shadow-xl backdrop-blur-sm' : 'absolute' "
+      class="top-0 left-0 z-50 w-full fixed bg-navy-blue backdrop-blur-sm">
+      <div class="container mx-auto">
+        <div class="relative flex items-center justify-between mx-4">
+          <div class="max-w-full px-4 w-60">
+            <a href="javascript:void(0)" class="block w-full py-5">
+              <img src="/asset/main_logo.png" alt="logo" class="w-full dark:hidden">
+              <img src="/asset/main_logo.png" alt="logo" class="hidden w-full dark:block">
+            </a>
+          </div>
+          <div class="flex items-center justify-between w-full px-4">
+            <div>
+              <button
+                @click="navbarOpen = !navbarOpen"
+                :class="navbarOpen && 'navbarTogglerActive'"
+                id="navbarToggler"
+                class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden">
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
+              </button>
+              <nav
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-90"
+                x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-90"
+                :class="!navbarOpen && 'hidden'"
+                id="navbarCollapse"
+                class="absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-black bg-opacity-80 backdrop-blur-sm py-5 px-6 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:shadow-none">
+                <ul class="block lg:flex">
+                  <li>
+                    <a href="/index.html"
+                      class="flex py-2 text-base font-medium text-white dark:text-white hover:text-green-neon lg:ml-12 lg:inline-flex">
+                       Beranda
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/training.html"
+                      class="flex py-2 text-base font-medium text-white dark:text-white hover:text-green-neon lg:ml-12 lg:inline-flex">
+                      Pelatihan
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/article.html"
+                      class="flex py-2 text-base font-medium text-white dark:text-white hover:text-green-neon lg:ml-12 lg:inline-flex">
+                      Artikel
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="justify-end hidden pr-16 sm:flex lg:pr-0">
+              <div class="relative"> 
+                  <input type="text" id="searchText" class="py-3 text-base font-medium text-black rounded-lg px-7 border-2 border-white"
+                  placeholder="Pencarian" autocomplete="off" oninput="searchText()">                   
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="pt-8 pb-16 lg:pt-16 lg:pb-24 space-y-6 md:space-y-24 bg-navy-blue">
+        
+        <div class="relative text-white">
+            <div class="p-6 flex flex-col md:flex-row gap-6 bg-sea-blue mx-auto">
+                <div class="w-full text-center">
+                    <h2 class="text-2xl font-bold">Kuis Keamanan Data & Privasi</h2>
+                </div>
+            </div>
+        </div>       
+
+        <div class="countdown relative bg-white/75 backdrop-blur-sm p-16 rounded-lg shadow-lg text-center w-full md:w-3/4 mx-auto flex flex-col items-center">
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <i class="fa-solid fa-stopwatch text-gray-400 text-[200px] opacity-30"></i>
+            </div>
+            <h2 class="text-xl font-semibold text-gray-800 relative z-10">Kuis akan dimulai dalam</h2>
+            <div id="countdown" class="text-6xl font-extrabold text-gray-900 py-10 relative z-10">5</div>
+            <button type="button" onclick="goBack()" class="bg-sea-blue hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg relative z-10">
+                Kembali
+            </button>
+        </div>
+
+    </section>
+    
+    
+    <div class="gtranslate_wrapper"></div>
+    
+    <script>window.gtranslateSettings = {"default_language":"id","languages":["id","zh-CN","en"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right","float_switcher_open_direction":"bottom"}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script src="/src/js/material-2/script-materi-2.js"></script>
+     <script src="/src/js/activeNavbar.js"></script>
+
+  </body>
+</html>

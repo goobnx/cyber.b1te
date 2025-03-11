@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cyber.b1te - Skor Materi 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/src/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <section class="pt-8 pb-16 lg:pt-16 lg:pb-24 space-y-6 md:space-y-24 bg-navy-blue">
+
+        <div class="countdown relative bg-white/75 backdrop-blur-sm p-16 rounded-lg shadow-lg text-center w-3/4 mx-auto flex flex-col items-center">
+            <div class="text-center">
+                <h1 class="text-xl font-bold">Nilai Anda:</h1>
+        <div class="relative w-48 h-48 mx-auto">
+            <canvas id="scoreChart"></canvas>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <span id="skor-akhir" class="text-5xl font-bold"></span>
+            </div>
+        </div>
+        <p id="result-message" class="text-lg mt-4"></p>
+            </div>
+        </div>
+    
+    </section>
+
+    <script src="/src/js/material-1/skor-materi-1.js"></script>
+
+  </body>
+</html>
