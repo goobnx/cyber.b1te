@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini AI Bubble Chat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/styleAI.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+    <div class="fixed bottom-6 right-6 flex flex-col items-end z-50">
+        <!-- Chat Window -->
+        <div id="chatContainer" class="chat-container w-80 md:w-96 bg-white rounded-lg shadow-xl mb-4 overflow-hidden">
+            <!-- Chat Header -->
+            <div class="bg-blue-600 text-white p-4 flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="bg-white rounded-full p-1 mr-3">
+                        <img src="/asset/logo-gemini.png" class="w-5">
+                    </div>
+                    <h3 class="font-medium">Gemini AI Assistant</h3>
+                </div>
+                <button id="closeChat" class="text-white hover:text-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Chat Messages Area -->
+            <div id="chatMessages" class="p-4 h-80 overflow-y-auto flex flex-col space-y-3">
+                <!-- Welcome Message -->
+                <div class="flex items-start">
+                    <div class="bg-blue-100 rounded-lg rounded-tl-none p-3 max-w-xs md:max-w-md shadow-sm">
+                        <p class="text-sm text-gray-800">Halo! Saya asisten AI yang menggunakan Gemini. Ada yang bisa saya bantu?</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chat Input Area -->
+            <div class="border-t border-gray-200 p-3">
+                <div class="flex space-x-2">
+                    <input id="userInput" type="text" placeholder="Ketik pesan Anda..." class="flex-1 border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button id="sendMessage" class="bg-blue-600 text-white rounded-full p-2 hover:bg-blue-700 focus:outline-none">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <button id="stopTyping" class="bg-red-600 text-white rounded-full p-2 hover:bg-red-700 focus:outline-none hidden">
+                        <i class="fa-solid fa-stop"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bubble Button -->
+        <button id="chatBubble" class="chat-bubble bg-white text-white rounded-full p-2 shadow-xl hover:bg-blue-100 focus:outline-none">
+            <img src="/asset/logo-gemini.png" class="w-10">
+        </button>
+    </div>
+
+    <!-- FOR AI -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script type="module" src="/src/js/scriptAI.js"></script>
+    
+</body>
+</html>
