@@ -1,4 +1,4 @@
-// Countdown page script
+
 let waktuCountdown = 5; 
 
 function initializeCountdown() {
@@ -19,16 +19,16 @@ function goBack() {
     window.history.back();
 }
 
-// Quiz functionality
+
 let soalIndex = 0;
 let soalData = [];
 let waktuTersisa = 30;
 let timer;
 let skor = 0;
-const nilaiPerSoal = 10; // Each question is worth 10 points
-const feedbackDuration = 5; // Seconds to display feedback before moving to next question
+const nilaiPerSoal = 10;
+const feedbackDuration = 5; 
 
-// Sample data as fallback if fetch fails
+
 const sampleSoalData = [
     {
         "nomor": 1,

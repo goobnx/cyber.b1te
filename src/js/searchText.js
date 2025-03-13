@@ -2,7 +2,6 @@ function searchText() {
   let input = document.getElementById("searchText").value.toLowerCase();
   let contentValue = document.getElementById("contentValue");
 
-  // Reset to original state first
   if (!contentValue.originalHTML) {
     contentValue.originalHTML = contentValue.innerHTML;
   } else if (!input) {
@@ -10,11 +9,9 @@ function searchText() {
     return;
   }
 
-  // Create a document fragment to work with the DOM structure
   let tempDiv = document.createElement("div");
   tempDiv.innerHTML = contentValue.originalHTML;
 
-  // Function to recursively process text nodes only
   function highlightTextNodes(node) {
     if (node.nodeType === Node.TEXT_NODE) {
       if (node.textContent.toLowerCase().includes(input)) {
@@ -26,14 +23,11 @@ function searchText() {
         node.parentNode.replaceChild(wrapper, node);
       }
     } else {
-      // Process child nodes
       Array.from(node.childNodes).forEach(highlightTextNodes);
     }
   }
 
-  // Apply highlighting to text nodes only
   highlightTextNodes(tempDiv);
 
-  // Update content
   contentValue.innerHTML = tempDiv.innerHTML;
 }

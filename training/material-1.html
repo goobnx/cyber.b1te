@@ -109,16 +109,16 @@
               </div>
           </div>
           <div class="flex flex-col md:flex-row gap-4 py-6 px-6 justify-center">
-              <button class="px-6 py-2 border border-white bg-sea-blue text-white rounded-xl transition w-full md:w-auto">
-                  Pahami Materi
-              </button>
-              <a href="/training/material-1/quiz.html" class="px-6 py-2 border border-sea-blue text-sea-blue rounded-xl hover:bg-sea-blue hover:text-black shadow-sea-blue-opacity-2 transition w-full md:w-auto text-center">
-                  Mulai Kuis
-              </a>
+            <a href="#section_material" class="px-6 py-2 border border-white bg-sea-blue text-white rounded-xl transition w-full md:w-auto">
+              Pahami Materi
+            </a>
+            <a href="/training/material-1/quiz.html" class="px-6 py-2 border border-sea-blue text-sea-blue rounded-xl hover:bg-sea-blue hover:text-black shadow-sea-blue-opacity-2 transition w-full md:w-auto text-center">
+                Mulai Kuis
+            </a>
           </div>
       </div>
 
-      <div class="flex flex-col justify-center items-center">
+      <div class="flex flex-col justify-center items-center" id="section_material">
           <iframe src="/asset/material-1.pdf" class="w-full max-w-[90%] md:max-w-[800px] h-[500px] shadow-lg"></iframe>
       
           <a href="/training/material-1/quiz.html" class="px-6 py-2 border border-white bg-sea-blue text-white rounded-full mt-6 transition w-full sm:w-[300px] md:w-1/2 text-center">
@@ -187,8 +187,8 @@
     </section>
 
     <!-- Bubble AI -->
-    <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 flex flex-col items-end z-50">
-      <div id="chatContainer" class="chat-container w-full max-w-[90%] sm:max-w-sm bg-white rounded-lg shadow-xl mb-4 overflow-hidden">
+    <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 flex flex-col items-end z-50 pointer-events-none">
+      <div id="chatContainer" class="chat-container w-full max-w-[90%] sm:max-w-sm bg-white rounded-lg shadow-xl mb-4 overflow-hidden pointer-events-auto">
           <div class="bg-sea-blue text-white p-4 flex justify-between items-center">
               <div class="flex items-center">
                   <div class="bg-white rounded-full p-1 mr-3">
@@ -224,7 +224,7 @@
           </div>
       </div>
   
-      <button id="chatBubble" class="chat-bubble bg-white rounded-full shadow-xl w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:bg-blue-100 focus:outline-none">
+      <button id="chatBubble" class="chat-bubble bg-white rounded-full shadow-xl w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:bg-blue-100 focus:outline-none pointer-events-auto">
           <img src="/asset/logo-gemini.png" class="w-7">
       </button>
     </div>
@@ -248,6 +248,8 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="/src/js/searchText.js"></script>
     <script src="/src/js/activeNavbar.js"></script>
+
+    <script src="/src/js/hrefToSectionMaterialPDF.js"></script>
 
   </body>
 </html>

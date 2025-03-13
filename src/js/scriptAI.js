@@ -1,6 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// Elemen DOM
 const chatBubble = document.getElementById("chatBubble");
 const chatContainer = document.getElementById("chatContainer");
 const closeChat = document.getElementById("closeChat");
@@ -9,28 +8,22 @@ const userInput = document.getElementById("userInput");
 const sendMessage = document.getElementById("sendMessage");
 const stopTyping = document.getElementById("stopTyping");
 
-// API key Gemini - ganti dengan API key Anda
 const API_KEY = "AIzaSyCB_DCF5-ruifp5XovApe_aO4LqjydK5gU";
 
-// Inisialisasi GoogleGenerativeAI dengan API key
 const genAI = new GoogleGenerativeAI(API_KEY);
 
-// Gunakan model Gemini 1.5 Flash
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-// Variabel untuk kontrol animasi mengetik
 let isTyping = false;
 let typingInterval = null;
 let shouldStopTyping = false;
 
-// Variabel untuk rate limiting
 let lastRequestTime = 0;
-const MIN_REQUEST_INTERVAL = 2000; // 2 detik antara permintaan
+const MIN_REQUEST_INTERVAL = 2000;
 let requestQueue = [];
 let isProcessingQueue = false;
 let rateLimitInfoTimeout = null;
 
-// Toggle chat window
 chatBubble.addEventListener("click", () => {
   chatContainer.classList.add("open");
   chatBubble.style.display = "none";
@@ -43,7 +36,6 @@ closeChat.addEventListener("click", () => {
   }, 300);
 });
 
-// Fungsi untuk menambahkan pesan user ke area chat
 function addUserMessage(text) {
   const messageDiv = document.createElement("div");
   messageDiv.className = "flex items-start justify-end";
@@ -60,11 +52,9 @@ function addUserMessage(text) {
   messageDiv.appendChild(messageBubble);
   chatMessages.appendChild(messageDiv);
 
-  // Auto scroll ke pesan terbaru
   chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-// Fungsi untuk menambahkan pesan sistem
 function addSystemMessage(text) {
   const messageDiv = document.createElement("div");
   messageDiv.className = "flex items-center justify-center my-2";
@@ -78,7 +68,6 @@ function addSystemMessage(text) {
   chatMessages.appendChild(messageDiv);
   chatMessages.scrollTop = chatMessages.scrollHeight;
 
-  // Hapus pesan sistem setelah beberapa detik
   if (rateLimitInfoTimeout) {
     clearTimeout(rateLimitInfoTimeout);
   }
@@ -91,7 +80,6 @@ function addSystemMessage(text) {
   }, 5000);
 }
 
-// Fungsi untuk menambahkan pesan AI dengan efek mengetik
 function addAIMessageWithTypingEffect(text) {
   isTyping = true;
   shouldStopTyping = false;
@@ -117,7 +105,7 @@ function addAIMessageWithTypingEffect(text) {
 
   setTimeout(() => {
     messageText.classList.remove("typing-indicator");
-    messageText.innerHTML = ""; // Kosongkan sebelum mulai mengetik
+    messageText.innerHTML = "";
 
     let visibleText = "";
     let charIndex = 0;
@@ -126,7 +114,7 @@ function addAIMessageWithTypingEffect(text) {
     typingInterval = setInterval(() => {
       if (charIndex < text.length && !shouldStopTyping) {
         visibleText += text.charAt(charIndex);
-        messageText.innerHTML = marked.parse(visibleText); // Gunakan Marked.js
+        messageText.innerHTML = marked.parse(visibleText);
         charIndex++;
         chatMessages.scrollTop = chatMessages.scrollHeight;
       } else {
@@ -138,22 +126,19 @@ function addAIMessageWithTypingEffect(text) {
         if (shouldStopTyping && charIndex < text.length) {
           messageText.innerHTML += " (dihentikan)";
         }
-        
-        // Proses antrian berikutnya setelah selesai mengetik
+
         processNextInQueue();
       }
     }, typingSpeed);
   }, 500);
 }
 
-// Handler untuk tombol stop
 stopTyping.addEventListener("click", () => {
   if (isTyping) {
     shouldStopTyping = true;
   }
 });
 
-// Fungsi untuk menangani loading state
 function setLoadingState(isLoading) {
   sendMessage.disabled = isLoading;
   userInput.disabled = isLoading;
@@ -170,14 +155,12 @@ function setLoadingState(isLoading) {
   }
 }
 
-// Fungsi untuk memeriksa apakah kita dapat mengirim permintaan berdasarkan rate limiting
 function canSendRequest() {
   const now = Date.now();
   const timeSinceLastRequest = now - lastRequestTime;
   return timeSinceLastRequest >= MIN_REQUEST_INTERVAL;
 }
 
-// Fungsi untuk memproses antrian permintaan
 async function processNextInQueue() {
   if (isProcessingQueue || requestQueue.length === 0) {
     return;
@@ -201,10 +184,9 @@ async function processNextInQueue() {
   } catch (error) {
     console.error("Error:", error);
     if (error.toString().includes("429") || error.toString().includes("RATE_LIMIT_EXCEEDED")) {
-      // Tambahkan kembali permintaan ke antrian jika error rate limit
       requestQueue.unshift(nextRequest);
       addSystemMessage("Batas permintaan tercapai. Mencoba lagi dalam beberapa detik...");
-      setTimeout(processNextInQueue, 5000); // Tunggu 5 detik sebelum mencoba lagi
+      setTimeout(processNextInQueue, 5000);
     } else {
       addAIMessageWithTypingEffect("Maaf, terjadi kesalahan. Silakan coba lagi.");
       processNextInQueue();
@@ -215,14 +197,11 @@ async function processNextInQueue() {
   }
 }
 
-// Fungsi untuk mengirim pesan ke Gemini
 function sendMessageToGemini(message) {
   setLoadingState(true);
   
-  // Tambahkan permintaan ke antrian
   requestQueue.push(message);
   
-  // Jika antrian hanya berisi satu item dan tidak sedang memproses, mulai proses
   if (requestQueue.length === 1 && !isTyping && !isProcessingQueue) {
     processNextInQueue();
   } else if (requestQueue.length > 1) {
@@ -230,7 +209,6 @@ function sendMessageToGemini(message) {
   }
 }
 
-// Handler untuk button send
 sendMessage.addEventListener("click", () => {
   const message = userInput.value.trim();
   if (message) {
@@ -240,14 +218,12 @@ sendMessage.addEventListener("click", () => {
   }
 });
 
-// Handler untuk enter key
 userInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     sendMessage.click();
   }
 });
 
-// Tambahkan CSS untuk animasi fade-out
 const style = document.createElement('style');
 style.textContent = `
   .system-message-animation {
