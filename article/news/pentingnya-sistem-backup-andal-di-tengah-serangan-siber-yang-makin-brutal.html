@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/styleAI.css">
 </head>
 <body
     x-data="
@@ -268,8 +269,59 @@
       </section>
     </main>
     
-    
-    <div class="gtranslate_wrapper"></div> 
+    <!-- Bubble AI -->
+    <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 flex flex-col items-end z-50">
+      <div id="chatContainer" class="chat-container w-full max-w-[90%] sm:max-w-sm bg-white rounded-lg shadow-xl mb-4 overflow-hidden">
+          <div class="bg-sea-blue text-white p-4 flex justify-between items-center">
+              <div class="flex items-center">
+                  <div class="bg-white rounded-full p-1 mr-3">
+                      <img src="/asset/logo-gemini.png" class="w-5">
+                  </div>
+                  <h3 class="font-medium text-sm sm:text-base">Gemini AI Assistant</h3>
+              </div>
+              <button id="closeChat" class="text-white hover:text-gray-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+              </button>
+          </div>
+  
+          <div id="chatMessages" class="p-4 h-64 sm:h-72 md:h-80 overflow-y-auto flex flex-col space-y-3">
+              <div class="flex items-start">
+                  <div class="bg-blue-100 rounded-lg rounded-tl-none p-3 max-w-xs sm:max-w-md shadow-sm">
+                      <p class="text-sm text-gray-800">Halo! Saya asisten AI yang menggunakan Gemini. Ada yang bisa saya bantu?</p>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="border-t border-gray-200 p-3">
+              <div class="flex space-x-2">
+                  <input id="userInput" type="text" placeholder="Ketik pesan Anda..." class="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <button id="sendMessage" class="bg-sea-blue text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:bg-blue-400 transition-colors">
+                      <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                  <button id="stopTyping" class="bg-red-600 text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:bg-red-700 hidden transition-colors">
+                      <i class="fa-solid fa-stop"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+  
+      <button id="chatBubble" class="chat-bubble bg-white rounded-full shadow-xl w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:bg-blue-100 focus:outline-none">
+          <img src="/asset/logo-gemini.png" class="w-7">
+      </button>
+    </div>
+
+    <!-- FOR AI -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script type="module" src="/src/js/scriptAI.js"></script>
     
      <!-- GTranslate -->
     <div class="gtranslate_wrapper text-white"></div>

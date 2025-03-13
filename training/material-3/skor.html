@@ -91,18 +91,68 @@
 
     <section class="pt-36 space-y-6 md:space-y-24 bg-navy-blue">
 
-        <div class="countdown relative bg-white/75 backdrop-blur-sm p-16 rounded-lg shadow-lg text-center w-3/4 mx-auto flex flex-col items-center">
-            <div class="text-center">
-                <h1 class="text-xl font-bold">Nilai Anda:</h1>
-        <div class="relative w-48 h-48 mx-auto">
-            <canvas id="scoreChart"></canvas>
-            <div class="absolute inset-0 flex items-center justify-center">
-                <span id="skor-akhir" class="text-5xl font-bold"></span>
-            </div>
+      <div class="countdown relative bg-white/75 backdrop-blur-sm p-16 rounded-lg shadow-lg text-center w-3/4 mx-auto flex flex-col items-center">
+          <div class="text-center">
+              <h1 class="text-xl font-bold">Nilai Anda:</h1>
+      <div class="relative w-48 h-48 mx-auto">
+          <canvas id="scoreChart"></canvas>
+          <div class="absolute inset-0 flex items-center justify-center">
+              <span id="skor-akhir" class="text-5xl font-bold"></span>
+          </div>
+      </div>
+      <p id="result-message" class="text-lg mt-4"></p>
+          </div>
+      </div>
+
+      <!-- PELATIHAN -->
+      <div class="px-4 py-6 md:py-0">
+        <div class="text-center pb-5">
+          <h2 class="text-green-neon text-lg font-medium">PELATIHAN</h2>
+          <h1 class="text-3xl text-white font-bold mb-6">
+            Pelajari dasar keamanan siber dan lindungi data Anda
+          </h1>
         </div>
-        <p id="result-message" class="text-lg mt-4"></p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <div class="relative w-full max-w-xs bg-gray-700 text-white rounded-2xl p-6 overflow-hidden inverted-radius">
+            <h2 class="text-lg md:text-xl font-bold leading-tight text-left">
+              Serangan Siber & <br>Cara Mengatasinya  
+            </h2>
+            <div class="flex items-center mt-4 space-x-4 text-white justify-center md:justify-start">
+              <div class="flex items-center space-x-2">
+                <span><i class="fa-regular fa-note-sticky text-green-neon"></i></span>
+                <span>10 Soal</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <span><i class="fa-solid fa-chart-simple text-green-neon"></i></span>
+                <span>Tingkat: Dasar</span>
+              </div>
             </div>
+            <a href="/training/material-1.html"
+              class="mt-6 w-full border border-green-neon text-green-neon py-2 rounded-lg hover:bg-green-400 hover:text-gray-900 transition inline-block text-center">
+              Mulai Pelatihan
+            </a>
+          </div>
+          <div class="relative w-full max-w-xs bg-gray-700 text-white rounded-2xl p-6 overflow-hidden inverted-radius">
+            <h2 class="text-lg md:text-xl font-bold leading-tight text-left">
+              Keamanan<br>Data & Privasi
+            </h2>
+            <div class="flex items-center mt-4 space-x-4 text-white justify-center md:justify-start">
+              <div class="flex items-center space-x-2">
+                <span><i class="fa-regular fa-note-sticky text-green-neon"></i></span>
+                <span>10 Soal</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <span><i class="fa-solid fa-chart-simple text-green-neon"></i></span>
+                <span>Tingkat: Dasar</span>
+              </div>
+            </div>
+            <a href="/training/material-2.html"
+              class="mt-6 w-full border border-green-neon text-green-neon py-2 rounded-lg hover:bg-green-400 hover:text-gray-900 transition inline-block text-center">
+              Mulai Pelatihan
+            </a>
+          </div>
         </div>
+      </div>
 
       <!-- FOOTER -->
       <section class="text-white pt-16">
