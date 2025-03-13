@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let percentage = (skorAkhir / totalSoal) * 100;
     let message = "";
 
-    // Tentukan pesan berdasarkan skor
     if (percentage < 60) {
         message = "Waduh, coba lagi yuk. Kita mulai dari materi lagi ya";
     } else if (percentage < 80) {
@@ -13,11 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
         message = "Hebat, ayo coba modul lainnya!";
     }
 
-    // Update tampilan teks
     document.getElementById("skor-akhir").innerText = skorAkhir;
     document.getElementById("result-message").innerText = message;
 
-    // Chart.js untuk grafik lingkaran
     let ctx = document.getElementById('scoreChart').getContext('2d');
     new Chart(ctx, {
         type: 'doughnut',
