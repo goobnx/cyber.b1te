@@ -16,7 +16,6 @@
     "
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false">
-
     <header
       x-data="
         {
@@ -79,8 +78,9 @@
             <div class="justify-end hidden pr-16 sm:flex lg:pr-0">
               <div class="relative"> 
                   <input type="text" id="searchText" class="py-3 text-base font-medium text-black rounded-lg px-7 border-2 border-white"
-                  placeholder="Pencarian" autocomplete="off" oninput="searchText()">                   
-              </div>
+                  placeholder="Pencarian" autocomplete="off" oninput="searchText()">
+                </div>
+                                 
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@
                     </p>
                     <div class="flex flex-wrap items-center gap-4 text-xs bg-[#1E293B] px-3 py-2 rounded-lg w-fit mt-4 text-white">
                         <span><i class="fa-solid fa-note-sticky"></i> 10 Lembar</span>
-                        <span><i class="fa-solid fa-chart-simple"></i> Tingkat: Mudah</span>
+                        <span><i class="fa-solid fa-chart-simple"></i> Tingkat: Dasar</span>
                         <span><i class="fa-solid fa-hourglass-start"></i> 20 Menit</span>
                     </div>
                 </div>
@@ -184,17 +184,18 @@
         
     </section>
 
-    <div class="gtranslate_wrapper"></div>
-    
+    <!-- GTranslate -->
+    <div class="gtranslate_wrapper text-white"></div>
     <script>window.gtranslateSettings = {
-      "default_language":"id",
-      "languages":["id","zh-CN","en"],
-      "wrapper_selector":".gtranslate_wrapper",
-      "switcher_horizontal_position":"left",
-      "float_switcher_open_direction":"bottom"
+        "default_language":"id",
+        "languages":["id","en"],
+        "wrapper_selector":".gtranslate_wrapper",
+        "flag_size":24,
+        "horizontal_position":"left",
+        "vertical_position":"bottom"
       }
     </script>
-    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/fc.js" defer></script>
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="/src/js/searchText.js"></script>

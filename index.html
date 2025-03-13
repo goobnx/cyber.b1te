@@ -41,6 +41,7 @@
         mask-repeat: no-repeat;
       }
     </style>
+    
   </head>
   <body
     x-data="
@@ -112,8 +113,9 @@
             <div class="justify-end hidden pr-16 sm:flex lg:pr-0">
               <div class="relative"> 
                   <input type="text" id="searchText" class="py-3 text-base font-medium text-black rounded-lg px-7 border-2 border-white"
-                  placeholder="Pencarian" autocomplete="off" oninput="searchText()">                   
-              </div>
+                  placeholder="Pencarian" autocomplete="off" oninput="searchText()">
+                </div>
+                                 
             </div>
           </div>
         </div>
@@ -239,7 +241,7 @@
           </h1>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
-          <div class="relative max-w-xs w-full bg-gray-800 text-white rounded-2xl p-6 overflow-hidden inverted-radius">
+          <div class="relative max-w-xs w-full bg-gray-700 text-white rounded-2xl p-6 overflow-hidden inverted-radius">
             <h2 class="text-lg md:text-xl font-bold leading-tight text-left">
               Serangan Siber & <br>Cara Mengatasinya  
             </h2>
@@ -250,7 +252,7 @@
               </div>
               <div class="flex items-center space-x-2">
                 <span><i class="fa-solid fa-chart-simple text-green-neon"></i></span>
-                <span>Tingkat: Mudah</span>
+                <span>Tingkat: Dasar</span>
               </div>
             </div>
             <a href="/training/material-1.html"
@@ -258,7 +260,7 @@
               Mulai Pelatihan
             </a>
           </div>
-          <div class="relative max-w-xs w-full bg-gray-800 text-white rounded-2xl p-6 overflow-hidden inverted-radius">
+          <div class="relative max-w-xs w-full bg-gray-700 text-white rounded-2xl p-6 overflow-hidden inverted-radius">
             <h2 class="text-lg md:text-xl font-bold leading-tight text-left">
               Keamanan<br>Data & Privasi
             </h2>
@@ -269,7 +271,7 @@
               </div>
               <div class="flex items-center space-x-2">
                 <span><i class="fa-solid fa-chart-simple text-green-neon"></i></span>
-                <span>Tingkat: Mudah</span>
+                <span>Tingkat: Dasar</span>
               </div>
             </div>
             <a href="/training/material-2.html"
@@ -277,7 +279,7 @@
               Mulai Pelatihan
             </a>
           </div>
-          <div class="relative max-w-xs w-full bg-gray-800 text-white rounded-2xl p-6 overflow-hidden inverted-radius">
+          <div class="relative max-w-xs w-full bg-gray-700 text-white rounded-2xl p-6 overflow-hidden inverted-radius">
             <h2 class="text-lg md:text-xl font-bold leading-tight text-left">
               Etika & Kepatuhan<br>keamanan siber
             </h2>
@@ -288,7 +290,7 @@
               </div>
               <div class="flex items-center space-x-2">
                 <span><i class="fa-solid fa-chart-simple text-green-neon"></i></span>
-                <span>Tingkat: Mudah</span>
+                <span>Tingkat: Dasar</span>
               </div>
             </div>
             <a href="/training/material-3.html"
@@ -304,10 +306,11 @@
         <section class="flex flex-col md:flex-row items-center justify-between px-10">
             <!-- Bagian Kiri -->
             <div class="w-full md:w-2/5 text-white pr-1">
-                <h4 class="text-green-neon text-sm font-semibold">TESTIMONI</h4>
-                <h2 class="text-2xl font-bold mt-2">
-                    Keamanan Digital kini menjadi lebih <span class="underline">mudah dipahami</span>
-                </h2>
+                <h2 class="text-green-neon text-lg font-medium">TESTIMONI</h2>
+                
+                <h1 class="text-3xl text-white font-bold mb-6">
+                  Keamanan digital kini menjadi lebih mudah dipahami
+                </h1>
                 <p class="text-gray-400 mt-2">
                     Pengguna kami mendapatkan wawasan baru tentang keamanan siber dan cara melindungi data mereka.
                 </p>
@@ -338,10 +341,10 @@
                                 Sekarang saya lebih paham bagaimana cara melindungi akun saya dari peretas.
                             </p>
                             <div class="flex items-center mt-4">
-                                <img src="https://randomuser.me/api/portraits/women/45.jpg" class="w-10 h-10 rounded-full">
+                                <img src="/asset/user-2.jpg" class="w-10 h-10 rounded-full object-cover">
                                 <div class="ml-3">
                                     <h4 class="font-bold">Khairunnisa</h4>
-                                    <p class="text-gray-500 text-sm">Lorem Ipsum is</p>
+                                    <p class="text-gray-500 text-sm">UI/UX Designer</p>
                                 </div>
                             </div>
                         </div>
@@ -356,10 +359,10 @@
                                 Materi yang diberikan sangat mudah dipahami. Saya lebih bijak dalam bersosial!
                             </p>
                             <div class="flex items-center mt-4">
-                                <img src="https://randomuser.me/api/portraits/men/45.jpg" class="w-10 h-10 rounded-full">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" class="w-10 h-10 rounded-full object-cover">
                                 <div class="ml-3">
                                     <h4 class="font-bold">Rama</h4>
-                                    <p class="text-gray-500 text-sm">CEO TokPed</p>
+                                    <p class="text-gray-500 text-sm">Backstack Dev</p>
                                 </div>
                             </div>
                         </div>
@@ -374,10 +377,10 @@
                               Sekarang saya lebih paham bagaimana cara melindungi akun saya dari peretas.
                             </p>
                             <div class="flex items-center mt-4">
-                                <img src="https://randomuser.me/api/portraits/women/30.jpg" class="w-10 h-10 rounded-full">
+                                <img src="/asset/user-3.jpg" class="w-10 h-10 rounded-full object-cover">
                                 <div class="ml-3">
                                     <h4 class="font-bold">Novita</h4>
-                                    <p class="text-gray-500 text-sm">Lorem Ipsum is</p>
+                                    <p class="text-gray-500 text-sm">Frontend Dev</p>
                                 </div>
                             </div>
                         </div>
@@ -392,10 +395,10 @@
                               Materi yang diberikan sangat mudah dipahami. Saya lebih bijak dalam bersosial!
                             </p>
                             <div class="flex items-center mt-4">
-                                <img src="https://randomuser.me/api/portraits/men/25.jpg" class="w-10 h-10 rounded-full">
+                                <img src="/asset/user-1.jpg" class="w-10 h-10 rounded-full">
                                 <div class="ml-3">
                                     <h4 class="font-bold">Djauharil</h4>
-                                    <p class="text-gray-500 text-sm">Lorem Ipsum is</p>
+                                    <p class="text-gray-500 text-sm">CEO cyber.b1te</p>
                                 </div>
                             </div>
                         </div>
@@ -408,8 +411,10 @@
       <!-- ARTIKEL -->
       <div class="py-6 md:py-0">
         <div class="text-center">
-            <h2 class="text-green-400 text-sm font-semibold">ARTIKEL</h2>
-            <h3 class="text-white text-2xl font-bold">Tetap aman di dunia digital, temukan wawasan terbaru!</h3>
+            <h2 class="text-green-neon text-lg font-medium">ARTIKEL</h2>
+            <h1 class="text-3xl text-white font-bold mb-6">
+              Tetap aman di dunia digital, temukan wawasan terbaru!
+            </h1>
         </div>
         <div class="mt-8 flex flex-wrap justify-center gap-12">
             <!-- Berita 1 -->
@@ -422,7 +427,7 @@
                     <i class="fa-solid fa-users"></i>&nbsp;2.5k
                   </span>
                   <span>
-                    <i class="fa-solid fa-clock"></i>&nbsp;23 Februari 2025
+                    <i class="fa-solid fa-clock"></i>&nbsp;28 Desember 2024
                   </span>
                 </div>
                 <h4 class="text-white font-semibold mt-2">Hacker China Berhasil Curi Data dan Sadap Jutaan Warga Amerika!</h4>
@@ -437,10 +442,10 @@
                 </div>
                 <div class="flex items-center text-green-neon text-sm mt-3 gap-x-3">
                   <span class="flex items-center mr-3">
-                    <i class="fa-solid fa-users"></i>&nbsp;2.5k
+                    <i class="fa-solid fa-users"></i>&nbsp;2.9k
                   </span>
                   <span>
-                    <i class="fa-solid fa-clock"></i>&nbsp;23 Februari 2025
+                    <i class="fa-solid fa-clock"></i>&nbsp;7 Februari 2025
                   </span>
                 </div>
                 <h4 class="text-white font-semibold mt-2">Pakar Ungkap 19 Juta Serangan Siber 'Teror' RI Sepanjang 2024</h4>
@@ -455,7 +460,7 @@
                 </div>
                 <div class="flex items-center text-green-neon text-sm mt-3 gap-x-3">
                     <span class="flex items-center mr-3">
-                      <i class="fa-solid fa-users"></i>&nbsp;2.5k
+                      <i class="fa-solid fa-users"></i>&nbsp;1.7k
                     </span>
                     <span>
                       <i class="fa-solid fa-clock"></i>&nbsp;23 Februari 2025
@@ -474,7 +479,7 @@
         <section class="px-6">
           <div class="flex flex-col md:flex-row items-center md:items-start py-6 px-6">
             <div class="md:w-4/5">
-              <h2 class="text-green-400 font-semibold text-xl md:text-2xl">CARA PENGGUNAAN</h2>
+              <h2 class="text-green-neon text-lg font-medium">CARA PENGGUNAAN</h2>
               <p class="text-white text-lg max-w-2xl mt-2">
                 Ikuti langkah sederhana ini untuk memulai perjalanan hebat bersama kami.
               </p>
@@ -572,7 +577,7 @@
                 Dapatkan wawasan, serta dukungan, lalu terhubung dengan para ahli dan pengguna lain yang peduli dengan keamanan digital.
               <div class="flex items-center gap-4 mt-6">
                   <a href="" target="_blank" class="text-blue-400 text-xl"><i class="fab fa-instagram"></i></a>
-                  <a href="" target="_blank" class="text-blue-400 text-xl"><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://whatsapp.com/channel/0029Vb9GwWA5K3zLJqKGjr0h" target="_blank" class="text-blue-400 text-xl"><i class="fab fa-whatsapp"></i></a>
                   <a href="https://discord.gg/GM3EuBbn" target="_blank" class="text-blue-400 text-xl"><i class="fab fa-discord"></i></a>
               </div>
               <p class="text-xs text-gray-400 mt-6">© 2025 cyber.b1te. All Right Reserved</p>
@@ -604,10 +609,20 @@
       </section>
 
     </div>
+    
+    <!-- GTranslate -->
+    <div class="gtranslate_wrapper text-white"></div>
+    <script>window.gtranslateSettings = {
+        "default_language":"id",
+        "languages":["id","en"],
+        "wrapper_selector":".gtranslate_wrapper",
+        "flag_size":24,
+        "horizontal_position":"left",
+        "vertical_position":"bottom"
+      }
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/fc.js" defer></script>
 
-    <div class="gtranslate_wrapper"></div>
-<script>window.gtranslateSettings = {"default_language":"id","languages":["id","en"],"globe_color":"#66aaff","wrapper_selector":".gtranslate_wrapper","flag_size":24,"horizontal_position":"left","vertical_position":"bottom","globe_size":40}</script>
-<script src="https://cdn.gtranslate.net/widgets/latest/globe.js" defer></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 

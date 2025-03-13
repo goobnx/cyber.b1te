@@ -122,3 +122,9 @@ body {
 .border-r-5 {
     border-right-width: 5px;
 }
+
+.gt_switcher_wrapper {
+    background-color: #0085A6;
+    padding: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

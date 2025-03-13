@@ -16,7 +16,6 @@
     "
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false">
-
     <header
       x-data="
         {
@@ -79,8 +78,9 @@
             <div class="justify-end hidden pr-16 sm:flex lg:pr-0">
               <div class="relative"> 
                   <input type="text" id="searchText" class="py-3 text-base font-medium text-black rounded-lg px-7 border-2 border-white"
-                  placeholder="Pencarian" autocomplete="off" oninput="searchText()">                   
-              </div>
+                  placeholder="Pencarian" autocomplete="off" oninput="searchText()">
+                </div>
+                                 
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@
                             <img class="h-10 w-10 rounded-full hidden md:block" src="https://flowbite.com/docs/images/people/profile-picture-2.jpg" alt="Danang Arradian">
                             <p class="text-green-neon font-medium">Danang Arradian</p>
                             <span class="text-gray-500">•</span>
-                            <p class="text-gray-400">28 Desember 2024</p>
+                            <p class="text-gray-400">7 Februari 2025</p>
                         </div>
                     </address>
                 </header>
@@ -233,17 +233,18 @@
     </main>
     
     
-    <div class="gtranslate_wrapper"></div>
-    
+    <!-- GTranslate -->
+    <div class="gtranslate_wrapper text-white"></div>
     <script>window.gtranslateSettings = {
-      "default_language":"id",
-      "languages":["id","zh-CN","en"],
-      "wrapper_selector":".gtranslate_wrapper",
-      "switcher_horizontal_position":"left",
-      "float_switcher_open_direction":"bottom"
+        "default_language":"id",
+        "languages":["id","en"],
+        "wrapper_selector":".gtranslate_wrapper",
+        "flag_size":24,
+        "horizontal_position":"left",
+        "vertical_position":"bottom"
       }
     </script>
-    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/fc.js" defer></script>
     
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="/src/js/searchText.js"></script>
